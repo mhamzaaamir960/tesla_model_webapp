@@ -1,15 +1,18 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-// import './App.css'
+import React from "react";
+import { Layout } from "antd";
+import Sidebar from "./components/Sidebar";
+import './App.css'
+
+const { Sider, Content } = Layout;
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="flex justify-center items-center w-full min-h-screen">
-      <h3 className="text-white bg-black px-4 py-2 rounded text-4xl font-bold">Hello World!</h3>
-    </div>
+    <Layout className="h-[100vh] flex flex-col justify-end bg-gray-100">
+      <Sider theme="light" trigger={null} width={250} className=" bg-gray-100">
+        <Sidebar />
+      </Sider>
+      <Content className="bg-gray-100 ">content</Content>
+    </Layout>
   );
 }
 
