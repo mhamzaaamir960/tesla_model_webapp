@@ -10,7 +10,7 @@ export const MenuData = [
   {
     key: "1",
     icon: (
-      <div className="">
+      <div>
         <IoToggle className="text-[18px] mr-2 " />
       </div>
     ),
@@ -19,7 +19,7 @@ export const MenuData = [
   {
     key: "2",
     icon: (
-      <div className="">
+      <div>
         <IoCarSportSharp className="text-[18px]  mr-2" />
       </div>
     ),
@@ -28,7 +28,7 @@ export const MenuData = [
   {
     key: "3",
     icon: (
-      <div className="">
+      <div>
         <MdBolt className="text-[18px]  mr-2" />
       </div>
     ),
@@ -37,7 +37,7 @@ export const MenuData = [
   {
     key: "4",
     icon: (
-      <div className="">
+      <div>
         <GiSteeringWheel className="text-[18px]  mr-2" />
       </div>
     ),
@@ -46,7 +46,7 @@ export const MenuData = [
   {
     key: "5",
     icon: (
-      <div className="">
+      <div>
         <BiSolidLockAlt className="text-[18px]  mr-2" />
       </div>
     ),
@@ -55,7 +55,7 @@ export const MenuData = [
   {
     key: "6",
     icon: (
-      <div className="">
+      <div>
         <TbSunFilled className="text-[18px]  mr-2" />
       </div>
     ),
@@ -65,8 +65,8 @@ export const MenuData = [
     key: "7",
     icon: (
       <>
-        <div class="absolute left-[27px] top-[19px] w-[8px] h-[1px] bg-gray-500 -rotate-45"></div>
-        <BiRectangle class=" text-[18px] left-0 flex items-center justify-center mr-2"></BiRectangle>
+        <div className="absolute left-[27px] top-[19px] w-[8px] h-[1px] bg-gray-500 -rotate-45"></div>
+        <BiRectangle className=" text-[18px] left-0 flex items-center justify-center mr-2"></BiRectangle>
       </>
     ),
     label: "Display",
@@ -74,7 +74,7 @@ export const MenuData = [
   {
     key: "8",
     icon: (
-      <div className="">
+      <div>
         <MdRoute className="text-[18px]  mr-2 scale-x-[-1]" />
       </div>
     ),
@@ -83,7 +83,7 @@ export const MenuData = [
   {
     key: "9",
     icon: (
-      <div className="">
+      <div>
         <TbNavigationFilled className="text-[18px]  mr-2" />
       </div>
     ),
@@ -92,7 +92,7 @@ export const MenuData = [
   {
     key: "10",
     icon: (
-      <div className="">
+      <div>
         <PiWarningCircle className="text-[18px]  mr-2" />
       </div>
     ),
@@ -101,7 +101,7 @@ export const MenuData = [
   {
     key: "11",
     icon: (
-      <div className="">
+      <div>
         <PiWrenchFill className="text-[18px]  mr-2" />
       </div>
     ),
@@ -110,7 +110,7 @@ export const MenuData = [
   {
     key: "12",
     icon: (
-      <div className="">
+      <div>
         <LiaDownloadSolid className="text-[18px]  mr-2" />
       </div>
     ),
