@@ -13,7 +13,7 @@ function MenuNav() {
   return (
     <Drawer className="bg-gray-50 min-w-[400px] w-full ">
       <DrawerTrigger>Open</DrawerTrigger>
-      <DrawerContent className="bg-gray-100 min-w-[400px] w-full max-w-[70%] ">
+      <DrawerContent className="bg-gray-100 min-w-[400px] w-full max-w-[60%] ">
         <Layout className="">
           <Sider
             theme="light"
