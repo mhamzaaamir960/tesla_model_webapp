@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MenuData } from "./MenuLinks";
 import { Menu } from "antd";
-import { icon } from "@fortawesome/fontawesome-svg-core";
+import { Link } from "react-router-dom";
 
 function Items() {
   const [selectedKey, setSelectedKey] = useState(null);
@@ -23,13 +23,14 @@ function Items() {
         >
           {item.icon}
         </div>
-        <span
+        <Link
+          to={item.link}
           className={`ml-2 font-medium ${
             selectedKey === item.key ? "text-black" : "text-gray-500"
           }`}
         >
           {item.label}
-        </span>
+        </Link>
       </div>
     ),
     onClick: () => handleItemClick(item.key),

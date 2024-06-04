@@ -15,6 +15,7 @@ export const MenuData = [
       </div>
     ),
     label: "Controls",
+    link: "/",
   },
   {
     key: "2",
@@ -24,6 +25,7 @@ export const MenuData = [
       </div>
     ),
     label: "Pedals & Steering",
+    link: "/pedals-steering",
   },
   {
     key: "3",
@@ -33,6 +35,7 @@ export const MenuData = [
       </div>
     ),
     label: "Charging",
+    link: "/charging",
   },
   {
     key: "4",
@@ -42,6 +45,7 @@ export const MenuData = [
       </div>
     ),
     label: "Autopilot",
+    link: "/autopilot",
   },
   {
     key: "5",
@@ -51,6 +55,7 @@ export const MenuData = [
       </div>
     ),
     label: "Locks",
+    link: "/locks",
   },
   {
     key: "6",
@@ -60,6 +65,7 @@ export const MenuData = [
       </div>
     ),
     label: "Lights",
+    link: "/lights",
   },
   {
     key: "7",
@@ -70,6 +76,7 @@ export const MenuData = [
       </>
     ),
     label: "Display",
+    link: "/display",
   },
   {
     key: "8",
@@ -79,6 +86,7 @@ export const MenuData = [
       </div>
     ),
     label: "Trips",
+    link: "/trips",
   },
   {
     key: "9",
@@ -88,6 +96,7 @@ export const MenuData = [
       </div>
     ),
     label: "Navigation",
+    link: "/navigation",
   },
   {
     key: "10",
@@ -97,6 +106,7 @@ export const MenuData = [
       </div>
     ),
     label: "Safety",
+    link: "/safety",
   },
   {
     key: "11",
@@ -106,6 +116,7 @@ export const MenuData = [
       </div>
     ),
     label: "Service",
+    link: "/service",
   },
   {
     key: "12",
@@ -115,5 +126,6 @@ export const MenuData = [
       </div>
     ),
     label: "Software",
+    link: "/software",
   },
 ];
