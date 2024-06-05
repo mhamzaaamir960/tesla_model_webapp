@@ -10,7 +10,6 @@ import {
 
 function Notifications() {
   const handleNotifications = () => {
-    console.log("Clicked");
     setClick(!click);
   };
   return (
