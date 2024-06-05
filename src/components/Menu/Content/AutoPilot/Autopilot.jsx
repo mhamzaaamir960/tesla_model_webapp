@@ -172,6 +172,104 @@ function Autopilot() {
           />
         </div>
       </div>
+
+      <div className="flex flex-col max-w-[530px] justify-start items-start gap-y-3 w-full ">
+        <span className="text-base font-medium">
+          Forward Collection Warning
+        </span>
+
+        <ToggleGroup type="single" className=" w-full flex justify-start    ">
+          <ToggleGroupItem
+            value="off"
+            className="px-8 py-6 bg-gray-100 flex gap-x-2 border rounded-l min-w-[150px] data-[state=on]:bg-white border"
+          >
+            Off
+          </ToggleGroupItem>
+
+          <ToggleGroupItem
+            value="late"
+            className="text-md px-8 py-6 bg-gray-100 border rounded-r min-w-[150px] data-[state=on]:bg-white border "
+          >
+            Late
+          </ToggleGroupItem>
+          <ToggleGroupItem
+            value="medium"
+            className="text-md px-8 py-6 bg-gray-100 border rounded-r min-w-[150px] data-[state=on]:bg-white border "
+          >
+            Medium
+          </ToggleGroupItem>
+          <ToggleGroupItem
+            value="early"
+            className="text-md px-8 py-6 bg-gray-100 border rounded-r min-w-[150px] data-[state=on]:bg-white border "
+          >
+            Early
+          </ToggleGroupItem>
+        </ToggleGroup>
+      </div>
+
+      <div className="flex flex-col max-w-[530px] justify-start items-start gap-y-3 w-full mt-4">
+        <div className="flex gap-x-2 items-center">
+          <span className="text-base font-medium">
+            Lane Departure Avoidance
+          </span>
+          <PiWarningCircle className="text-[22px]  mr-2 text-gray-500" />
+        </div>
+
+        <ToggleGroup type="single" className=" w-full flex justify-start    ">
+          <ToggleGroupItem
+            value="off"
+            className="px-8 py-6 bg-gray-100 flex gap-x-2 border rounded-l min-w-[150px] data-[state=on]:bg-white border"
+          >
+            Off
+          </ToggleGroupItem>
+
+          <ToggleGroupItem
+            value="warning"
+            className="text-md px-8 py-6 bg-gray-100 border rounded-r min-w-[150px] data-[state=on]:bg-white border "
+          >
+            Warning
+          </ToggleGroupItem>
+          <ToggleGroupItem
+            value="assist"
+            className="text-md px-8 py-6 bg-gray-100 border rounded-r min-w-[150px] data-[state=on]:bg-white border "
+          >
+            Assist
+          </ToggleGroupItem>
+        </ToggleGroup>
+      </div>
+
+      <div className="flex flex-row items-center gap-x-4 rounded-lg p-2 ">
+        <Switch />
+        <h4 className="text-base text-black font-medium">
+          Emergency Lane Departure Avoidance
+        </h4>
+      </div>
+
+      <div className="flex flex-row items-center gap-x-4 rounded-lg p-2 ">
+        <Switch />
+
+        <h4 className="text-base text-black font-medium">
+          Automatic Emergency Braking
+        </h4>
+      </div>
+
+      <div className="flex flex-row items-center gap-x-4 rounded-lg p-2 ">
+        <Switch />
+        <div className="flex gap-x-2 items-center ">
+          <h4 className="text-base text-black font-medium">
+            Obstacle-Aware Acceleration
+          </h4>
+          <PiWarningCircle className="text-[22px]  mr-2 text-gray-500" />
+        </div>
+      </div>
+
+      <div className="flex flex-row items-center gap-x-4 rounded-lg p-2 mb-10">
+        <Switch />
+
+        <h4 className="text-base text-black font-medium">
+          Traffic-Aware Cruise Control Chime
+        </h4>
+      </div>
     </div>
   );
 }
