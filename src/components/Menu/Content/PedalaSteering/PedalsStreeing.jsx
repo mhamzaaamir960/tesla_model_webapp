@@ -4,11 +4,11 @@ import { Switch } from "@/components/ui/switch";
 
 function PedalsStreeing() {
   return (
-    <div className="min-h-[75vh] h-full flex flex-col items-center w-full">
+    <div className=" flex flex-col items-center w-full ml-10">
       {/* 1 */}
-      <div className="flex flex-col max-w-[530px] justify-center items-start mt-6 gap-x-10 w-full ml-10 gap-y-2">
+      <div className="flex flex-col  justify-center items-start mt-6 gap-x-10 w-full gap-y-2">
         <h4 className="text-base font-medium">Acceleration</h4>
-        <ToggleGroup type="single" className=" w-fit flex justify-start     ">
+        <ToggleGroup type="single" className="  flex justify-start     ">
           <ToggleGroupItem
             value="chill"
             className="p-7 flex gap-x-2 border rounded-l w-[150px] data-[state=on]:bg-white"
@@ -26,7 +26,7 @@ function PedalsStreeing() {
       </div>
 
       {/* 2 */}
-      <div className="flex flex-col max-w-[530px] justify-center items-start mt-6 gap-x-10 w-full ml-10 gap-y-2">
+      <div className="flex flex-col justify-center items-start mt-6 w-full  gap-y-2">
         <h4 className="text-base font-medium">Steering Mode</h4>
         <ToggleGroup type="single" className=" w-fit flex justify-start     ">
           <ToggleGroupItem
@@ -52,7 +52,7 @@ function PedalsStreeing() {
       </div>
 
       {/* 3 */}
-      <div className="flex flex-col max-w-[530px] justify-center items-start mt-6 gap-x-10 w-full ml-10 gap-y-2">
+      <div className="flex flex-col justify-center items-start mt-6 w-full  gap-y-2">
         <h4 className="text-base font-medium">Stopping Mode</h4>
         <ToggleGroup type="single" className=" w-fit flex justify-start     ">
           <ToggleGroupItem
@@ -81,7 +81,7 @@ function PedalsStreeing() {
         </p>
       </div>
 
-      <div className="flex flex-row items-start justify-center rounded-lg p-2  mt-10">
+      <div className="flex flex-row items-start justify-start w-full rounded-lg p-2  mt-10">
         <Switch className="" />
         <div className=" ml-4">
           <h4 className="text-base text-black font-medium">Slip Start</h4>

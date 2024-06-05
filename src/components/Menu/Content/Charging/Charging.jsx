@@ -7,7 +7,7 @@ import { FaPlus, FaMinus } from "react-icons/fa6";
 function Charging() {
   const [counter, setCounter] = useState(32);
   return (
-    <div className="w-full flex flex-col items-center mb-40">
+    <div className="w-full flex flex-col items-center ">
       <div className="relative top-0 flex justify-between w-full">
         <div className="flex w-full justify-center">
           <img
@@ -84,13 +84,15 @@ function Charging() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-y-1 justify-start w-[65%] ml-4 mt-4 ">
+      <div className="flex flex-col gap-y-1 justify-start w-[65%] ml-4 my-4 ">
         <span className="text-lg font-medium">Supercharging</span>
         <span className="text-lg font-medium my-2">CA$10.92</span>
         <span>
           Burnaby, BC <br /> Tue,22 Mar 10:56 am
         </span>
-        <span className="mt-2 text-blue-600 font-medium mb-10">Supercharging Tips</span>
+        <span className="mt-2 text-blue-600 font-medium mb-10">
+          Supercharging Tips
+        </span>
       </div>
     </div>
   );
