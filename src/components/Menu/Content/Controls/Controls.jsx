@@ -19,9 +19,9 @@ import {
 
 function Controls({ className, ...props }) {
   return (
-    <div className="w-full min-h-[70vh] flex flex-col items-center">
+    <div className="w-full min-h-[70vh] h-full  flex flex-col items-center">
       {/* 1 */}
-      <div className="flex max-w-[530px] justify-between items-center mt-6 gap-x-10 w-full ">
+      <div className="flex max-w-[530px] justify-between items-center mt-5 gap-x-10 w-full ">
         <ToggleGroup type="single" className=" w-fit rounded-2xl">
           <ToggleGroupItem
             value="off"
@@ -56,7 +56,7 @@ function Controls({ className, ...props }) {
       </div>
 
       {/* 2 */}
-      <div className="flex justify-center items-center mt-6 ">
+      <div className="flex justify-center items-center mt-5 ">
         <ToggleGroup type="single" className=" rounded-2xl">
           <ToggleGroupItem
             value="fold mirrors"
@@ -102,7 +102,7 @@ function Controls({ className, ...props }) {
       </div>
 
       {/* 3 */}
-      <div className="flex max-w-[530px] justify-between items-center mt-6 gap-x-10 w-full ">
+      <div className="flex max-w-[530px] justify-between items-center mt-5 gap-x-10 w-full ">
         <ToggleGroup type="single" className=" w-fit rounded-2xl">
           <ToggleGroupItem
             value="off"
@@ -136,7 +136,7 @@ function Controls({ className, ...props }) {
 
       {/* 4 */}
 
-      <div className="flex justify-center items-center mt-6   ">
+      <div className="flex justify-center items-center mt-5   ">
         <ToggleGroup
           type="single"
           className=" rounded-2xl flex justify-between gap-x-8  min-w-[525px]"
@@ -169,7 +169,7 @@ function Controls({ className, ...props }) {
         </ToggleGroup>
       </div>
 
-      <div className="flex justify-center items-center mt-6   ">
+      <div className="flex justify-center items-center mt-5   ">
         <ToggleGroup
           type="single"
           className=" rounded-2xl flex justify-between gap-x-8 min-w-[525px]"
@@ -200,7 +200,7 @@ function Controls({ className, ...props }) {
       </div>
 
       {/* 5 */}
-      <div className="w-[525px] flex justify-between gap-x-4  mt-6 ">
+      <div className="w-[525px] flex justify-between gap-x-4  mt-5 ">
         <Slider
           defaultValue={[70]}
           max={100}
