@@ -1,6 +1,7 @@
 import React from "react";
 import { IoIosBluetooth, IoMdClose, IoIosAdd } from "react-icons/io";
 import { PiWarningCircle } from "react-icons/pi";
+import { Switch } from "@/components/ui/switch";
 import {
   Dialog,
   DialogContent,
@@ -9,7 +10,6 @@ import {
   DialogClose,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Switch } from "@/components/ui/switch";
 
 function Bluetooth() {
   const handleBluetooth = () => {
