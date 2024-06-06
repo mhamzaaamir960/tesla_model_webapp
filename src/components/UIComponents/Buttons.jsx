@@ -74,23 +74,28 @@ export function AutoButton({ btn, className }) {
 
 export function LongButtons({ btn1, btn2, btn3 }) {
   return (
-    <div className="w-full flex justify-start gap-x-5">
-      {btn1 && (
-        <button className="font-medium bg-gray-200 px-10 py-3 rounded">
-          {btn1}
-        </button>
-      )}
-      {btn2 && (
-        <button className="font-medium bg-gray-200 px-10 py-3 rounded">
-          {btn2}
-        </button>
-      )}
-      {btn3 && (
-        <button className="font-medium bg-gray-200 px-10 py-3 rounded">
-          {btn3}
-        </button>
-      )}
-      
-    </div>
+    <ToggleGroup type="single" className="w-full flex justify-start gap-x-2 ">
+      <ToggleGroupItem>
+        {btn1 && (
+          <button className="font-medium w-[220px]  bg-gray-200 py-3 rounded">
+            {btn1}
+          </button>
+        )}
+      </ToggleGroupItem>
+      <ToggleGroupItem>
+        {btn2 && (
+          <button className="font-medium w-[220px] bg-gray-200  py-3 rounded">
+            {btn2}
+          </button>
+        )}
+      </ToggleGroupItem>
+      <ToggleGroupItem>
+        {btn3 && (
+          <button className="font-medium w-[220px] bg-gray-200  py-3 rounded">
+            {btn3}
+          </button>
+        )}
+      </ToggleGroupItem>
+    </ToggleGroup>
   );
 }

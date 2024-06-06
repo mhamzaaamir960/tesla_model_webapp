@@ -2,10 +2,10 @@ import React from "react";
 import { Switch } from "../ui/switch";
 import { PiWarningCircle } from "react-icons/pi";
 
-function SwitchButton({ heading, warning, description }) {
+function SwitchButton({ heading, warning, description,className }) {
   return (
     <div className="flex flex-row  gap-x-4 rounded-lg p-2  ">
-      <Switch />
+      <Switch className={`${className } `} />
       <div className="flex flex-col gap-y-1 items-start ">
         <div className="flex gap-x-2 items-center ">
           {heading && (
