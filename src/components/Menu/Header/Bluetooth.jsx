@@ -47,6 +47,7 @@ function Bluetooth() {
             </div>
             <p className="text-sm mt-4 text-gray-500">No devices connected</p>
           </div>
+          
           <div>
             <div>
               <div className="space-y-4 ">

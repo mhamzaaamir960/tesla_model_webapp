@@ -3,7 +3,8 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import light from "@/assets/light.png";
 import mirror from "@/assets/mirror.png";
 import wiper from "@/assets/wiper.png";
-// import window from "@/assets/window.jpg";
+import childlockicon from "@/assets/childlockicon.png";
+import windowicon from "@/assets/windowicon.png";
 import { Toggle } from "@/components/ui/toggle";
 import { cn } from "@/lib/utils";
 import { Slider } from "@/components/ui/slider";
@@ -72,7 +73,7 @@ function Controls({ className, ...props }) {
 
           <ToggleGroupItem value="child lock" className="p-11 border rounded-l">
             <div className="flex flex-col items-center gap-y-1 ">
-              <FaChild className="text-2xl"/>
+              <img src={childlockicon} alt="child lock icon" width={25}/>
               <span className="text-sm flex flex-col">
                 Child <span>Lock</span>
               </span>
@@ -83,7 +84,7 @@ function Controls({ className, ...props }) {
             className="p-11 border rounded-l"
           >
             <div className="flex flex-col items-center gap-y-1 ">
-              <img src={mirror} alt="window icon" width={30} height={30} />
+              <img src={windowicon} alt="window icon" width={30} height={30} />
               <span className="text-sm flex flex-col">
                 Window <span>Lock</span>
               </span>
