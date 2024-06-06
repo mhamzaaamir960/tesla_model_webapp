@@ -1,11 +1,18 @@
 import React from "react";
 import { ToggleGroup, ToggleGroupItem } from "../ui/toggle-group";
+import { PiWarningCircle } from "react-icons/pi";
+import { Toggle } from "../ui/toggle";
 
-function Buttons({ heading, btn1, btn2, btn3, btn4 }) {
+function Buttons({ heading, btn1, btn2, btn3, btn4, warning, description }) {
   return (
     <div className="flex flex-col  gap-y-2  items-start my-5 gap-x-10 w-full ">
-      {heading && <span className="font-medium">{heading}</span>}
-      <ToggleGroup type="single" className=" w-fit rounded-2xl border rounded">
+      <div className="flex gap-x-2 items-center">
+        {heading && <span className="font-medium">{heading}</span>}
+        {warning === true && (
+          <PiWarningCircle className="text-[22px]  mr-2 text-gray-500" />
+        )}
+      </div>
+      <ToggleGroup type="single" className="w-fit  border rounded">
         {btn1 && (
           <ToggleGroupItem
             value={btn1}
@@ -26,9 +33,9 @@ function Buttons({ heading, btn1, btn2, btn3, btn4 }) {
         {btn3 && (
           <ToggleGroupItem
             value={btn3}
-            cclassName="w-[150px] py-6 flex gap-x-2  text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
+            className="w-[150px] py-6 flex gap-x-2 text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
           >
-            {btn3}
+            <span>{btn3}</span>
           </ToggleGroupItem>
         )}
 
@@ -37,12 +44,53 @@ function Buttons({ heading, btn1, btn2, btn3, btn4 }) {
             value={btn4}
             className="w-[150px] py-6 flex gap-x-2  text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
           >
-            {btn4}
+            <span>{btn4}</span>
           </ToggleGroupItem>
         )}
       </ToggleGroup>
+      {description && <p>{description}</p>}
     </div>
   );
 }
 
 export default Buttons;
+
+export function AutoButton({ btn, className }) {
+  return (
+    <>
+      {" "}
+      {btn && (
+        <Toggle
+          className={` py-6 w-[100px] data-[state=on]:bg-blue-500 data-[state=on]:text-white border rounded ${className}`}
+        >
+          <div>
+            <span className="">{btn}</span>
+          </div>
+        </Toggle>
+      )}
+    </>
+  );
+}
+
+export function LongButtons({ btn1, btn2, btn3 }) {
+  return (
+    <div className="w-full flex justify-start gap-x-5">
+      {btn1 && (
+        <button className="font-medium bg-gray-200 px-10 py-3 rounded">
+          {btn1}
+        </button>
+      )}
+      {btn2 && (
+        <button className="font-medium bg-gray-200 px-10 py-3 rounded">
+          {btn2}
+        </button>
+      )}
+      {btn3 && (
+        <button className="font-medium bg-gray-200 px-10 py-3 rounded">
+          {btn3}
+        </button>
+      )}
+      
+    </div>
+  );
+}
