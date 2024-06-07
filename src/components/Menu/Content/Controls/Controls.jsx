@@ -4,12 +4,12 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import light from "@/assets/light.png";
 import mirror from "@/assets/mirror.png";
 import wiper from "@/assets/wiper.png";
+import glovebox from "@/assets/glovebox.png"
 import childlockicon from "@/assets/childlockicon.png";
 import windowicon from "@/assets/windowicon.png";
 import { Toggle } from "@/components/ui/toggle";
 import { cn } from "@/lib/utils";
 import { Slider } from "@/components/ui/slider";
-import { FaChild } from "react-icons/fa6";
 import { GiSteeringWheel } from "react-icons/gi";
 import { TbBulb } from "react-icons/tb";
 import {
@@ -21,9 +21,10 @@ import {
 
 function Controls({ className, ...props }) {
   return (
-    <Container>
+    <Container className={'items-center'}>
       {/* 1 */}
-      <div className="flex max-w-[530px] justify-between items-center mt-5 gap-x-10 w-full ">
+
+      <div className="flex max-w-[530px] justify-between items-center mt-4 gap-x-10 w-full ">
         <ToggleGroup type="single" className=" w-fit rounded-2xl">
           <ToggleGroupItem
             value="off"
@@ -58,7 +59,7 @@ function Controls({ className, ...props }) {
       </div>
 
       {/* 2 */}
-      <div className="flex justify-center items-center mt-5 ">
+      <div className="flex justify-center items-center mt-4 ">
         <ToggleGroup type="single" className=" rounded-2xl">
           <ToggleGroupItem
             value="fold mirrors"
@@ -94,7 +95,7 @@ function Controls({ className, ...props }) {
 
           <ToggleGroupItem value="glove box" className="p-11 border rounded-l">
             <div className="flex flex-col items-center gap-y-1 ">
-              <img src={mirror} alt="mirror icon" width={30} height={30} />
+              <img src={glovebox} alt="mirror icon" width={35} height={35} />
               <span className="text-sm flex flex-col">
                 Glove <span>Box</span>
               </span>
@@ -104,7 +105,7 @@ function Controls({ className, ...props }) {
       </div>
 
       {/* 3 */}
-      <div className="flex max-w-[530px] justify-between items-center mt-5 gap-x-10 w-full ">
+      <div className="flex max-w-[530px] justify-between items-center mt-4 gap-x-10 w-full ">
         <ToggleGroup type="single" className=" w-fit rounded-2xl">
           <ToggleGroupItem
             value="off"
@@ -138,7 +139,7 @@ function Controls({ className, ...props }) {
 
       {/* 4 */}
 
-      <div className="flex justify-center items-center mt-5   ">
+      <div className="flex justify-center items-center mt-4   ">
         <ToggleGroup
           type="single"
           className=" rounded-2xl flex justify-between gap-x-8  min-w-[525px]"
@@ -171,7 +172,7 @@ function Controls({ className, ...props }) {
         </ToggleGroup>
       </div>
 
-      <div className="flex justify-center items-center mt-5   ">
+      <div className="flex justify-center items-center mt-4   ">
         <ToggleGroup
           type="single"
           className=" rounded-2xl flex justify-between gap-x-8 min-w-[525px]"
@@ -202,7 +203,7 @@ function Controls({ className, ...props }) {
       </div>
 
       {/* 5 */}
-      <div className="w-[525px] flex justify-between gap-x-4  mt-5 ">
+      <div className="w-[525px] flex justify-between gap-x-4  mt-4 ">
         <Slider
           defaultValue={[70]}
           max={100}
@@ -211,7 +212,7 @@ function Controls({ className, ...props }) {
           {...props}
         />
         <Toggle
-          className={`p-7 data-[state=on]:bg-blue-500 data-[state=on]:text-white border rounded`}
+          className={`p-7 bg-blue-500 text-white data-[state=on]:bg-gray-200 data-[state=on]:text-black border rounded`}
         >
           <div className=" ">
             <span className="">Auto</span>

@@ -9,6 +9,7 @@ function Buttons({
   btn2,
   btn3,
   btn4,
+  img1,
   warning,
   description,
   className,
@@ -29,6 +30,7 @@ function Buttons({
             value={btn1}
             className="w-[150px] py-6 flex gap-x-2 border text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
           >
+            {img1 && <img src={img1} alt="wiper icon" width={50} height={50} />}
             <span>{btn1}</span>
           </ToggleGroupItem>
         )}
