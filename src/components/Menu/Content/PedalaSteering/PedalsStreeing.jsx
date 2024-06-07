@@ -1,95 +1,37 @@
 import React from "react";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { Switch } from "@/components/ui/switch";
+import Buttons from "@/components/UIComponents/Buttons";
+import SwitchButton from "@/components/UIComponents/SwitchButton";
 
 function PedalsStreeing() {
   return (
-    <div className=" flex flex-col items-center w-full ml-10">
+    <div className=" flex flex-col items-start w-full max-w-[90%] ml-5 mt-5">
       {/* 1 */}
-      <div className="flex flex-col  justify-center items-start mt-6 gap-x-10 w-full gap-y-2">
-        <h4 className="text-base font-medium">Acceleration</h4>
-        <ToggleGroup type="single" className="  flex justify-start     ">
-          <ToggleGroupItem
-            value="chill"
-            className="p-7 flex gap-x-2 border rounded-l w-[150px] data-[state=on]:bg-white"
-          >
-            Chill
-          </ToggleGroupItem>
+      <Buttons heading={"Acceleration"} btn1={"Chill"} btn2={"Standard"} />
 
-          <ToggleGroupItem
-            value="standard"
-            className="text-md p-7 border rounded-r w-[150px] data-[state=on]:bg-white"
-          >
-            Standard
-          </ToggleGroupItem>
-        </ToggleGroup>
-      </div>
+      {/* 2  */}
+      <Buttons
+        heading={"Steering Mode"}
+        btn1={"Comfort"}
+        btn2={"Standard"}
+        btn3={"Sport"}
+      />
 
-      {/* 2 */}
-      <div className="flex flex-col justify-center items-start mt-6 w-full  gap-y-2">
-        <h4 className="text-base font-medium">Steering Mode</h4>
-        <ToggleGroup type="single" className=" w-fit flex justify-start     ">
-          <ToggleGroupItem
-            value="Comfort"
-            className="p-7 flex gap-x-2 border rounded-l w-[150px] data-[state=on]:bg-white"
-          >
-            Comfort
-          </ToggleGroupItem>
+      {/* 3  */}
+      <Buttons
+        heading={"Stopping Mode"}
+        btn1={"Creep"}
+        btn2={"Roll"}
+        btn3={"Hold"}
+        description={
+          "Maximizes range by extending regenerative braking to lower speeds and automatically blends in brakes to hold the vehicle at a stop"
+        }
+      />
+      {/* <div className="h-1 bg-gray-200 rounded-full w-[90%]  " /> */}
 
-          <ToggleGroupItem
-            value="standard"
-            className="text-md p-7 border rounded-r w-[150px] data-[state=on]:bg-white"
-          >
-            Standard
-          </ToggleGroupItem>
-          <ToggleGroupItem
-            value="sport"
-            className="text-md p-7 border rounded-r w-[150px]  data-[state=on]:bg-white"
-          >
-            Sport
-          </ToggleGroupItem>
-        </ToggleGroup>
-      </div>
-
-      {/* 3 */}
-      <div className="flex flex-col justify-center items-start mt-6 w-full  gap-y-2">
-        <h4 className="text-base font-medium">Stopping Mode</h4>
-        <ToggleGroup type="single" className=" w-fit flex justify-start     ">
-          <ToggleGroupItem
-            value="creep"
-            className="p-7 flex gap-x-2 border rounded-l w-[150px] data-[state=on]:bg-white"
-          >
-            Creep
-          </ToggleGroupItem>
-
-          <ToggleGroupItem
-            value="roll"
-            className="text-md p-7 border rounded-r w-[150px] data-[state=on]:bg-white"
-          >
-            Roll
-          </ToggleGroupItem>
-          <ToggleGroupItem
-            value="hold"
-            className="text-md p-7 border rounded-r w-[150px]  data-[state=on]:bg-white"
-          >
-            Hold
-          </ToggleGroupItem>
-        </ToggleGroup>
-        <p>
-          Maximizes range by extending regenerative braking to lower speeds and
-          automatically blends in brakes to hold the vehicle at a stop
-        </p>
-      </div>
-
-      <div className="flex flex-row items-start justify-start w-full rounded-lg p-2  mt-10">
-        <Switch className="" />
-        <div className=" ml-4">
-          <h4 className="text-base text-black font-medium">Slip Start</h4>
-          <p className="text-base text-gray-500 ">
-            Use to help free vehicle stuck in snow, sand, or mud.
-          </p>
-        </div>
-      </div>
+      <SwitchButton
+        heading={"Slip Start"}
+        description={"Use to help free vehicle stuck in snow, sand, or mud."}
+      />
     </div>
   );
 }

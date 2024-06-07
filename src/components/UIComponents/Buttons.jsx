@@ -18,7 +18,7 @@ function Buttons({
       className={`${className} flex flex-col  gap-y-1  items-start my-5 gap-x-10 w-full `}
     >
       <div className="flex gap-x-2 items-center">
-        {heading && <span className="font-medium">{heading}</span>}
+        {heading && <span className="font-medium text-base">{heading}</span>}
         {warning === true && (
           <PiWarningCircle className="text-[22px]  mr-2 text-gray-500" />
         )}
@@ -29,7 +29,7 @@ function Buttons({
             value={btn1}
             className="w-[150px] py-6 flex gap-x-2  text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
           >
-            <span>{btn1}</span>
+            <span >{btn1}</span>
           </ToggleGroupItem>
         )}
         {btn2 && (
@@ -59,7 +59,7 @@ function Buttons({
           </ToggleGroupItem>
         )}
       </ToggleGroup>
-      {description && <p>{description}</p>}
+      {description && <p className="w-[80%]">{description}</p>}
     </div>
   );
 }
