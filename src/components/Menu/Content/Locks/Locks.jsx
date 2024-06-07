@@ -3,16 +3,14 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import childlockicon from "@/assets/childlockicon.png";
 import windowicon from "@/assets/windowicon.png";
 import { FaPlus } from "react-icons/fa6";
-import { Switch } from "@/components/ui/switch";
-import { Checkbox } from "@/components/ui/checkbox";
-import { PiWarningCircle } from "react-icons/pi";
 import SwitchButton from "@/components/UIComponents/SwitchButton";
 import CheckBox from "@/components/UIComponents/Checkbox";
 import Buttons from "@/components/UIComponents/Buttons";
+import Container from "@/components/UIComponents/Container";
 
 function Locks() {
   return (
-    <div className="flex flex-col w-full max-w-[90%] ml-5 mt-5 ">
+    <Container className={"mt-5 ml-5"}>
       <div className="flex justify-between items-center">
         <span className="font-medium text-lg">Keys</span>
         <div className="bg-gray-200 p-4 rounded cursor-pointer">
@@ -87,12 +85,14 @@ function Locks() {
           btn3={"Doors & Windows"}
         />
         <CheckBox labell={"Exclude Home"} className={"mb-2"} />
-        <p className="mb-5">You will not be notified if your car is left open</p>
+        <p className="mb-5">
+          You will not be notified if your car is left open
+        </p>
       </div>
 
-      <SwitchButton heading={"Lock Confirmation Sound"}  />
-      <SwitchButton heading={"Close Windows on Lock"} className={'mb-8'}/>
-    </div>
+      <SwitchButton heading={"Lock Confirmation Sound"} />
+      <SwitchButton heading={"Close Windows on Lock"} className={"mb-8"} />
+    </Container>
   );
 }
 

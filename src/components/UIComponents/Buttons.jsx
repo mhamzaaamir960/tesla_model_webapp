@@ -27,15 +27,15 @@ function Buttons({
         {btn1 && (
           <ToggleGroupItem
             value={btn1}
-            className="w-[150px] py-6 flex gap-x-2  text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
+            className="w-[150px] py-6 flex gap-x-2 border text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
           >
-            <span >{btn1}</span>
+            <span>{btn1}</span>
           </ToggleGroupItem>
         )}
         {btn2 && (
           <ToggleGroupItem
             value={btn2}
-            className="w-[150px] py-6 flex gap-x-2 text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
+            className="w-[150px] py-6 flex gap-x-2 border text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
           >
             <span>{btn2}</span>
           </ToggleGroupItem>
@@ -44,7 +44,7 @@ function Buttons({
         {btn3 && (
           <ToggleGroupItem
             value={btn3}
-            className="w-[150px] py-6 flex gap-x-2 text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
+            className="w-[150px] py-6 flex gap-x-2 border text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
           >
             <span>{btn3}</span>
           </ToggleGroupItem>
@@ -53,7 +53,7 @@ function Buttons({
         {btn4 && (
           <ToggleGroupItem
             value={btn4}
-            className="w-[150px] py-6 flex gap-x-2  text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
+            className="w-[150px] py-6 flex gap-x-2 border  text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
           >
             <span>{btn4}</span>
           </ToggleGroupItem>
@@ -83,26 +83,29 @@ export function AutoButton({ btn, className }) {
   );
 }
 
-export function LongButtons({ btn1, btn2, btn3 }) {
+export function LongButtons({ btn1, btn2, btn3, className }) {
   return (
-    <ToggleGroup type="single" className="w-full flex justify-start gap-x-2 ">
+    <ToggleGroup
+      type="single"
+      className={`w-full flex justify-start gap-x-2 ${className}`}
+    >
       {btn1 && (
-        <ToggleGroupItem className="data-[state=on]:bg-white">
-          <button className="font-medium w-[220px]  bg-gray-200 py-3 rounded">
+        <ToggleGroupItem className="data-[state=on]:bg-white ">
+          <button className="font-medium w-[220px] border  bg-gray-200 py-3 rounded">
             {btn1}
           </button>
         </ToggleGroupItem>
       )}
       {btn2 && (
         <ToggleGroupItem className="data-[state=on]:bg-white">
-          <button className="font-medium w-[220px] bg-gray-200  py-3 rounded">
+          <button className="font-medium w-[220px] border bg-gray-200  py-3 rounded">
             {btn2}
           </button>
         </ToggleGroupItem>
       )}
       {btn3 && (
         <ToggleGroupItem className="data-[state=on]:bg-white">
-          <button className="font-medium w-[220px] bg-gray-200  py-3 rounded">
+          <button className="font-medium w-[220px] border bg-gray-200  py-3 rounded">
             {btn3}
           </button>
         </ToggleGroupItem>

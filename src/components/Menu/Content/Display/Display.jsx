@@ -1,4 +1,5 @@
 import React from "react";
+import Container from "@/components/UIComponents/Container";
 import { Slider } from "@/components/ui/slider";
 import { Toggle } from "@/components/ui/toggle";
 import { cn } from "@/lib/utils";
@@ -8,7 +9,7 @@ import Buttons from "@/components/UIComponents/Buttons";
 
 function Display({ className, ...props }) {
   return (
-    <div className="w-full flex flex-col items-start ml-4">
+    <Container className={"ml-5"}>
       <div className="flex flex-col  gap-y-2  items-start mt-5 gap-x-10 w-full ">
         <span className="font-medium">Appearance</span>
         <ToggleGroup
@@ -57,7 +58,7 @@ function Display({ className, ...props }) {
         </div>
       </div>
 
-      <div className="border bg-gray-200 py-2 px-10 rounded my-5">
+      <div className="border flex justify-center bg-gray-200 py-2 w-[200px] rounded my-5">
         <button className="font-medium">Screen Clean Mode</button>
       </div>
 
@@ -84,7 +85,7 @@ function Display({ className, ...props }) {
       <Buttons heading={"Distance"} btn1={"Kilometers"} btn2={"Miles"} />
       <Buttons heading={"Temprature"} btn1={"C"} btn2={"F"} />
       <Buttons heading={"Tire Pressure"} btn1={"Bar"} btn2={"PSI"} />
-    </div>
+    </Container>
   );
 }
 

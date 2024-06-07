@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import Container from "@/components/UIComponents/Container";
 import teslabattery from "@/assets/teslabattery.png";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { MdLocationOn } from "react-icons/md";
 import { FaPlus, FaMinus } from "react-icons/fa6";
+import { LongButtons } from "@/components/UIComponents/Buttons";
 
 function Charging() {
   const [counter, setCounter] = useState(32);
   return (
-    <div className="w-full flex flex-col items-center ">
+    <Container>
       <div className="relative top-0 flex justify-between w-full">
         <div className="flex w-full justify-center">
           <img
@@ -17,31 +18,16 @@ function Charging() {
             height={300}
           />
         </div>
-        <span className="absolute top-8 left-10 text-3xl font-semibold">
+        <span className="absolute top-12 left-12 text-3xl font-semibold">
           30%
         </span>
       </div>
 
-      <div className="flex flex-col max-w-[530px] justify-center items-start mt-4 gap-x-10 w-full ml-10 gap-x-4 ">
-        <ToggleGroup
-          type="single"
-          className=" w-full flex gap-x-6 justify-center    "
-        >
-          <ToggleGroupItem
-            value="open charge port"
-            className="px-12 py-6 bg-gray-200 flex gap-x-2 border rounded-l min-w-[170px] data-[state=on]:bg-white"
-          >
-            Open Charge Port
-          </ToggleGroupItem>
-
-          <ToggleGroupItem
-            value="unlock charge port"
-            className="text-md px-12 py-6 bg-gray-200 border rounded-r min-w-[170px] data-[state=on]:bg-white"
-          >
-            Unlock Charge Port
-          </ToggleGroupItem>
-        </ToggleGroup>
-      </div>
+      <LongButtons
+        className={"w-full flex justify-center mb-5"}
+        btn1={"Open Charge Port"}
+        btn2={"Unlock Charge Port"}
+      />
 
       <div className="w-[65%] ml-4 flex flex-col   mt-8">
         <h4 className="flex items-center gap-x-2">
@@ -94,7 +80,7 @@ function Charging() {
           Supercharging Tips
         </span>
       </div>
-    </div>
+    </Container>
   );
 }
 

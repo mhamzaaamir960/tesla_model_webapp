@@ -1,9 +1,10 @@
 import React from "react";
 import TripsData from "@/components/UIComponents/TripsData";
+import Container from "@/components/UIComponents/Container";
 
 function Trips() {
   return (
-    <div className="w-full flex flex-col justify-start ml-5 gap-y-10 mt-5">
+    <Container className={"mt-5 ml-5 gap-y-10"}>
       <TripsData
         TripTitle={"Current Trip"}
         distance={"8"}
@@ -48,7 +49,7 @@ function Trips() {
           </button>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
 

@@ -1,3 +1,4 @@
+import Container from "@/components/UIComponents/Container";
 import SwitchButton from "@/components/UIComponents/SwitchButton";
 import React, { useState } from "react";
 import { FaVolumeXmark, FaVolumeHigh, FaPlus, FaMinus } from "react-icons/fa6";
@@ -7,7 +8,7 @@ function Navigation() {
   const [vol, setVol] = useState(50);
   const [counter, setCounter] = useState(5);
   return (
-    <div className="flex flex-col w-full justify-start ml-5 mt-5 ">
+    <Container className={"mt-5 ml-5"}>
       <div className="flex flex-col gap-y-2 mb-10">
         <span className="font-medium">Navigation Volume </span>
         <div className="w-[50%]  flex justify-between ">
@@ -75,7 +76,7 @@ function Navigation() {
       <SwitchButton heading={"Use HOV Lanes"} />
 
       <div className="mb-10" />
-    </div>
+    </Container>
   );
 }
 

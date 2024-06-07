@@ -1,76 +1,35 @@
 import React, { useState } from "react";
-import { Switch } from "@/components/ui/switch";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { PiWarningCircle } from "react-icons/pi";
+import Container from "@/components/UIComponents/Container";
 import { FaMinus, FaPlus } from "react-icons/fa6";
+import SwitchButton from "@/components/UIComponents/SwitchButton";
+import Buttons from "@/components/UIComponents/Buttons";
 
 function Autopilot() {
   const [counter, setCounter] = useState(0);
   const [counter2, setCounter2] = useState(0);
 
   return (
-    <div className="w-full  ml-6 mt-2 flex flex-col gap-y-2 ">
-      <div className="flex flex-row items-center rounded-lg p-2 ">
-        <Switch />
-        <div className="ml-4">
-          <h4 className="text-base text-black font-medium">Autosteer (Beta)</h4>
-        </div>
-      </div>
-
-      <div className="flex flex-row items-center rounded-lg p-2 ">
-        <Switch className="" />
-        <div className="ml-4">
-          <h4 className="text-base text-black font-medium">
-            Full Self-Driving Visualization Preview
-          </h4>
-        </div>
-      </div>
+    <Container className={'mt-5 ml-5'}>
+      <SwitchButton heading={"Autosteer (Beta)"} />
+      <SwitchButton heading={"AFull Self-Driving Visualization Preview"} />
 
       <div className="h-1 bg-gray-200 rounded-full w-[90%] my-5" />
 
-      <div className="flex flex-col max-w-[530px] justify-start items-start gap-y-5 w-full ">
-        <div className="flex gap-x-2 items-center">
-          <span className="text-base font-medium">Set Speed</span>
-          <PiWarningCircle className="text-[22px]  mr-2 text-gray-500" />
-        </div>
-        <ToggleGroup type="single" className=" w-full flex justify-start    ">
-          <ToggleGroupItem
-            value="speed limit"
-            className="px-12 py-6 bg-gray-100 flex gap-x-2 border rounded-l min-w-[170px] data-[state=on]:bg-white border"
-          >
-            Speed Limit
-          </ToggleGroupItem>
+      <Buttons
+        heading={"Set Speed"}
+        warning={true}
+        btn1={"Speed Limit"}
+        btn2={"Current Speed"}
+        className={"gap-y-2"}
+      />
 
-          <ToggleGroupItem
-            value="current speed"
-            className="text-md px-12 py-6 bg-gray-100 border rounded-r min-w-[170px] data-[state=on]:bg-white border "
-          >
-            Current Speed
-          </ToggleGroupItem>
-        </ToggleGroup>
-      </div>
-
-      <div className="flex flex-col max-w-[530px] justify-start items-start gap-y-5 w-full mt-4 ">
-        <div className="flex gap-x-2 items-center">
-          <span className="text-base font-medium">Offset</span>
-          <PiWarningCircle className="text-[22px]  mr-2 text-gray-500" />
-        </div>
-        <ToggleGroup type="single" className=" w-full flex justify-start    ">
-          <ToggleGroupItem
-            value="fixed"
-            className="px-12 py-6 bg-gray-100 flex gap-x-2 border rounded-l min-w-[150px] data-[state=on]:bg-white border"
-          >
-            Fixed
-          </ToggleGroupItem>
-
-          <ToggleGroupItem
-            value="percentage"
-            className="text-md px-12 py-6 bg-gray-100 border rounded-r min-w-[150px] data-[state=on]:bg-white border "
-          >
-            Percentage
-          </ToggleGroupItem>
-        </ToggleGroup>
-      </div>
+      <Buttons
+        heading={"Offset"}
+        warning={true}
+        btn1={"Fixed"}
+        btn2={"Percentage"}
+        className={"gap-y-2"}
+      />
 
       <div className="flex w-[65%]  mt-4 ">
         <div className="min-w-[300px]  self-start p-2 flex items-center justify-between border bg-gray-200 rounded">
@@ -89,73 +48,26 @@ function Autopilot() {
 
       <div className="h-1 bg-gray-200 rounded-full w-[90%] my-5" />
 
-      <div className="flex flex-row gap-x-4 items-center rounded-lg p-2 ">
-        <Switch />
-        <div>
-          <h4 className="text-base text-black font-medium">
-            Automatic Blind Spot Camera
-          </h4>
-          <p>Show side repeater camera when turn signal is engaged</p>
-        </div>
-      </div>
+      <SwitchButton
+        heading={"Automatic Blind Spot Camera"}
+        description={"Show side repeater camera when turn signal is engaged"}
+      />
 
-      <div className="flex flex-row items-center gap-x-4 rounded-lg p-2 ">
-        <Switch />
-        <div className="flex gap-x-2 items-center ">
-          <h4 className="text-base text-black font-medium">
-            Blind Spot Collision Warining Chime
-          </h4>
-          <PiWarningCircle className="text-[22px]  mr-2 text-gray-500" />
-        </div>
-      </div>
+      <SwitchButton
+        heading={" Blind Spot Collision Warining Chime"}
+        warning={true}
+      />
 
       <div className="h-1 bg-gray-200 rounded-full w-[90%] my-5" />
 
-      <div className="flex flex-col max-w-[530px] justify-start items-start gap-y-3 w-full ">
-        <span className="text-base font-medium">Speed Limit Warning</span>
+      <Buttons
+        heading={"Speed Limit Warning"}
+        btn1={"Off"}
+        btn2={"Display"}
+        btn3={"Chime"}
+      />
 
-        <ToggleGroup type="single" className=" w-full flex justify-start    ">
-          <ToggleGroupItem
-            value="off"
-            className="px-8 py-6 bg-gray-100 flex gap-x-2 border rounded-l min-w-[150px] data-[state=on]:bg-white border"
-          >
-            Off
-          </ToggleGroupItem>
-
-          <ToggleGroupItem
-            value="display"
-            className="text-md px-8 py-6 bg-gray-100 border rounded-r min-w-[150px] data-[state=on]:bg-white border "
-          >
-            Display
-          </ToggleGroupItem>
-          <ToggleGroupItem
-            value="chime"
-            className="text-md px-8 py-6 bg-gray-100 border rounded-r min-w-[150px] data-[state=on]:bg-white border "
-          >
-            Chime
-          </ToggleGroupItem>
-        </ToggleGroup>
-      </div>
-
-      <div className="flex flex-col max-w-[530px] justify-start items-start gap-y-3 w-full mt-4">
-        <span className="text-base font-medium">Speed Limit</span>
-
-        <ToggleGroup type="single" className=" w-full flex justify-start    ">
-          <ToggleGroupItem
-            value="relative"
-            className="px-8 py-6 bg-gray-100 flex gap-x-2 border rounded-l min-w-[150px] data-[state=on]:bg-white border"
-          >
-            Relative
-          </ToggleGroupItem>
-
-          <ToggleGroupItem
-            value="absolute"
-            className="text-md px-8 py-6 bg-gray-100 border rounded-r min-w-[150px] data-[state=on]:bg-white border "
-          >
-            Absolute
-          </ToggleGroupItem>
-        </ToggleGroup>
-      </div>
+      <Buttons heading={"Speed Limit"} btn1={"Relative"} btn2={"Absolute"} />
 
       <div className="flex  flex-col gap-y-2 w-[65%]  mt-4  mb-10">
         <span className="font-medium ">Offset</span>
@@ -173,104 +85,27 @@ function Autopilot() {
         </div>
       </div>
 
-      <div className="flex flex-col max-w-[530px] justify-start items-start gap-y-3 w-full ">
-        <span className="text-base font-medium">
-          Forward Collection Warning
-        </span>
+      <Buttons
+        heading={"Forward Collection Warning"}
+        btn1={"Off"}
+        btn2={"Late"}
+        btn3={"Medium"}
+        btn4={"Early"}
+      />
 
-        <ToggleGroup type="single" className=" w-full flex justify-start    ">
-          <ToggleGroupItem
-            value="off"
-            className="px-8 py-6 bg-gray-100 flex gap-x-2 border rounded-l min-w-[150px] data-[state=on]:bg-white border"
-          >
-            Off
-          </ToggleGroupItem>
+      <Buttons
+        heading={"Lane Departure Avoidance"}
+        warning={true}
+        btn1={"Off"}
+        btn2={"Warning"}
+        btn3={"Assist"}
+      />
 
-          <ToggleGroupItem
-            value="late"
-            className="text-md px-8 py-6 bg-gray-100 border rounded-r min-w-[150px] data-[state=on]:bg-white border "
-          >
-            Late
-          </ToggleGroupItem>
-          <ToggleGroupItem
-            value="medium"
-            className="text-md px-8 py-6 bg-gray-100 border rounded-r min-w-[150px] data-[state=on]:bg-white border "
-          >
-            Medium
-          </ToggleGroupItem>
-          <ToggleGroupItem
-            value="early"
-            className="text-md px-8 py-6 bg-gray-100 border rounded-r min-w-[150px] data-[state=on]:bg-white border "
-          >
-            Early
-          </ToggleGroupItem>
-        </ToggleGroup>
-      </div>
-
-      <div className="flex flex-col max-w-[530px] justify-start items-start gap-y-3 w-full mt-4">
-        <div className="flex gap-x-2 items-center">
-          <span className="text-base font-medium">
-            Lane Departure Avoidance
-          </span>
-          <PiWarningCircle className="text-[22px]  mr-2 text-gray-500" />
-        </div>
-
-        <ToggleGroup type="single" className=" w-full flex justify-start    ">
-          <ToggleGroupItem
-            value="off"
-            className="px-8 py-6 bg-gray-100 flex gap-x-2 border rounded-l min-w-[150px] data-[state=on]:bg-white border"
-          >
-            Off
-          </ToggleGroupItem>
-
-          <ToggleGroupItem
-            value="warning"
-            className="text-md px-8 py-6 bg-gray-100 border rounded-r min-w-[150px] data-[state=on]:bg-white border "
-          >
-            Warning
-          </ToggleGroupItem>
-          <ToggleGroupItem
-            value="assist"
-            className="text-md px-8 py-6 bg-gray-100 border rounded-r min-w-[150px] data-[state=on]:bg-white border "
-          >
-            Assist
-          </ToggleGroupItem>
-        </ToggleGroup>
-      </div>
-
-      <div className="flex flex-row items-center gap-x-4 rounded-lg p-2 ">
-        <Switch />
-        <h4 className="text-base text-black font-medium">
-          Emergency Lane Departure Avoidance
-        </h4>
-      </div>
-
-      <div className="flex flex-row items-center gap-x-4 rounded-lg p-2 ">
-        <Switch />
-
-        <h4 className="text-base text-black font-medium">
-          Automatic Emergency Braking
-        </h4>
-      </div>
-
-      <div className="flex flex-row items-center gap-x-4 rounded-lg p-2 ">
-        <Switch />
-        <div className="flex gap-x-2 items-center ">
-          <h4 className="text-base text-black font-medium">
-            Obstacle-Aware Acceleration
-          </h4>
-          <PiWarningCircle className="text-[22px]  mr-2 text-gray-500" />
-        </div>
-      </div>
-
-      <div className="flex flex-row items-center gap-x-4 rounded-lg p-2 mb-10">
-        <Switch />
-
-        <h4 className="text-base text-black font-medium">
-          Traffic-Aware Cruise Control Chime
-        </h4>
-      </div>
-    </div>
+      <SwitchButton heading={"Emergency Lane Departure Avoidance"} />
+      <SwitchButton heading={"Automatic Emergency Braking"} />
+      <SwitchButton heading={" Obstacle-Aware Acceleration"} warning={true} />
+      <SwitchButton heading={"Traffic-Aware Cruise Control Chime"} />
+    </Container>
   );
 }
 

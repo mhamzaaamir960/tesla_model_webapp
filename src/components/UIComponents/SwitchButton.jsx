@@ -12,7 +12,7 @@ function SwitchButton({ heading, warning, description, className }) {
             <h4 className="text-base text-black font-medium">{heading}</h4>
           )}
           {warning === true && (
-            <PiWarningCircle className="text-[22px]  mr-2 text-gray-500" />
+            <PiWarningCircle className="text-[22px] mr-2 text-gray-500" />
           )}
         </div>
         <p className="text-gray-500 text-base max-w-[90%]">{description}</p>

@@ -10,6 +10,7 @@ import {
   DialogClose,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import SwitchButton from "@/components/UIComponents/SwitchButton";
 
 function Bluetooth() {
   const handleBluetooth = () => {
@@ -47,47 +48,28 @@ function Bluetooth() {
             </div>
             <p className="text-sm mt-4 text-gray-500">No devices connected</p>
           </div>
-          
+
           <div>
             <div>
               <div className="space-y-4 ">
-                <div className="flex flex-row items-start justify-between rounded-lg p-2">
-                  <Switch className="" />
-                  <div className=" ml-4">
-                    <h4 className="text-base text-black font-medium">
-                      Priority Device
-                    </h4>
-                    <p className="text-base text-gray-500 ">
-                      Car will attempt to connect to priority device before
-                      others
-                    </p>
-                  </div>
-                </div>
+                <SwitchButton
+                  heading={"Priority Device"}
+                  description={
+                    " Car will attempt to connect to priority device before others"
+                  }
+                />
 
-                <div className="flex flex-row items-start rounded-lg p-2 ">
-                  <Switch className="" />
-                  <div className="ml-4">
-                    <h4 className="text-base text-black font-medium">
-                      Sync Contacts and Recent Calls
-                    </h4>
-                  </div>
-                </div>
+                <SwitchButton heading={"Sync Contacts and Recent Calls"} />
+                <SwitchButton
+                  heading={"Sync Messages"}
+                  description={
+                    "Due to limitations of Bluetooth support from your device, you will not be able to send group messages"
+                  }
+                />
 
-                <div className="flex flex-row items-start justify-between rounded-lg p-2 ">
-                  <Switch className="" />
-                  <div className=" ml-4">
-                    <h4 className="text-base text-black font-medium">
-                      Sync Messages
-                    </h4>
-                    <p className="text-base text-gray-500  ">
-                      Due to limitations of Bluetooth support from your device,
-                      you will not be able to send group messages
-                    </p>
-                    <h4 className="text-base mt-5 text-black font-medium">
-                      Chime on new Message
-                    </h4>
-                  </div>
-                </div>
+                <p className="text-base mt-5 ml-5 text-black font-medium">
+                  Chime on new Message
+                </p>
               </div>
             </div>
             <div className="flex w-full justify-evenly mt-16">

@@ -1,10 +1,11 @@
 import React from "react";
+import Container from "@/components/UIComponents/Container";
 import teslaroof from "@/assets/teslaroof.png";
 import { LongButtons } from "@/components/UIComponents/Buttons";
 
 function Service() {
   return (
-    <div className="flex flex-col items-center gap-y-5 w-full mt-5 ">
+    <Container className={'mt-5 ml-5 gap-y-5 items-center'}>
       <div className="flex w-full justify-center items-center relative top-0">
         <img
           src={teslaroof}
@@ -31,12 +32,12 @@ function Service() {
         <LongButtons btn1={"Factory Reset"} btn2={"Wiper Service Mode"} />
         <p className="ml-3">
           Need Tesla Roadside Assistance?{" "}
-          <span className="text-purple-500 font-medium">
+          <span className="text-blue-500 font-medium">
             Call 1-877-79TESLA
           </span>
         </p>
       </div>
-    </div>
+    </Container>
   );
 }
 

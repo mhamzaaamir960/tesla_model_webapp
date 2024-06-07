@@ -7,12 +7,13 @@ import Buttons, {
   LongButtons,
 } from "@/components/UIComponents/Buttons";
 import CheckBox from "@/components/UIComponents/Checkbox";
+import Container from "@/components/UIComponents/Container";
 
 function Safety() {
   const [counter, setCounter] = useState(137);
 
   return (
-    <div className="mt-5 ml-5 w-full flex flex-col gap-y-5 justify-start">
+    <Container className={"mt-5 ml-5 gap-y-5"}>
       <SwitchButton heading={"Allow Mobile Access"} />
 
       <div className="flex flex-col gap-y-6 w-fit ml-10  ">
@@ -108,7 +109,7 @@ function Safety() {
           btn3={"On"}
         />
       </div>
-    </div>
+    </Container>
   );
 }
 

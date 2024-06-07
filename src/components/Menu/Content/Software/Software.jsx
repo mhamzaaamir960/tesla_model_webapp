@@ -1,10 +1,11 @@
 import React from "react";
 import tesla from "@/assets/tesla.png";
 import Buttons from "@/components/UIComponents/Buttons";
+import Container from "@/components/UIComponents/Container";
 
 function Software() {
   return (
-    <div className="flex flex-col w-full">
+    <Container>
       <div className="w-full flex justify-center items-start ">
         <img src={tesla} alt="tesla image" width={400} />
       </div>
@@ -61,7 +62,7 @@ function Software() {
           Data Sharing
         </button>
       </div>
-    </div>
+    </Container>
   );
 }
 

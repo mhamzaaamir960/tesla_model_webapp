@@ -1,10 +1,11 @@
 import React from "react";
+import Container from "@/components/UIComponents/Container";
 import Buttons from "@/components/UIComponents/Buttons";
 import SwitchButton from "@/components/UIComponents/SwitchButton";
 
 function PedalsStreeing() {
   return (
-    <div className=" flex flex-col items-start w-full max-w-[90%] ml-5 mt-5">
+    <Container className={"ml-5 mt-5"}>
       {/* 1 */}
       <Buttons heading={"Acceleration"} btn1={"Chill"} btn2={"Standard"} />
 
@@ -32,7 +33,7 @@ function PedalsStreeing() {
         heading={"Slip Start"}
         description={"Use to help free vehicle stuck in snow, sand, or mud."}
       />
-    </div>
+    </Container>
   );
 }
 

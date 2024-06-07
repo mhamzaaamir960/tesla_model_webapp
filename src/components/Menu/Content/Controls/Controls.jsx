@@ -1,4 +1,5 @@
 import React from "react";
+import Container from "@/components/UIComponents/Container";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import light from "@/assets/light.png";
 import mirror from "@/assets/mirror.png";
@@ -20,7 +21,7 @@ import {
 
 function Controls({ className, ...props }) {
   return (
-    <div className="w-full min-h-[70vh] h-full  flex flex-col items-center">
+    <Container>
       {/* 1 */}
       <div className="flex max-w-[530px] justify-between items-center mt-5 gap-x-10 w-full ">
         <ToggleGroup type="single" className=" w-fit rounded-2xl">
@@ -73,7 +74,7 @@ function Controls({ className, ...props }) {
 
           <ToggleGroupItem value="child lock" className="p-11 border rounded-l">
             <div className="flex flex-col items-center gap-y-1 ">
-              <img src={childlockicon} alt="child lock icon" width={25}/>
+              <img src={childlockicon} alt="child lock icon" width={25} />
               <span className="text-sm flex flex-col">
                 Child <span>Lock</span>
               </span>
@@ -217,7 +218,7 @@ function Controls({ className, ...props }) {
           </div>
         </Toggle>
       </div>
-    </div>
+    </Container>
   );
 }
 
