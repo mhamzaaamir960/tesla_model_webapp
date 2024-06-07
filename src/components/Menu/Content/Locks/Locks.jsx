@@ -6,10 +6,13 @@ import { FaPlus } from "react-icons/fa6";
 import { Switch } from "@/components/ui/switch";
 import { Checkbox } from "@/components/ui/checkbox";
 import { PiWarningCircle } from "react-icons/pi";
+import SwitchButton from "@/components/UIComponents/SwitchButton";
+import CheckBox from "@/components/UIComponents/Checkbox";
+import Buttons from "@/components/UIComponents/Buttons";
 
 function Locks() {
   return (
-    <div className="flex flex-col w-full  p-4">
+    <div className="flex flex-col w-full max-w-[90%] ml-5 mt-5 ">
       <div className="flex justify-between items-center">
         <span className="font-medium text-lg">Keys</span>
         <div className="bg-gray-200 p-4 rounded cursor-pointer">
@@ -53,108 +56,42 @@ function Locks() {
       </div>
 
       <div className="space-y-4 ">
-        <div className="flex flex-row items-start justify-start rounded-lg p-2">
-          <Switch />
-          <div className=" ml-4">
-            <h4 className="text-base text-black font-medium">
-              Walk-Away Door Lock
-            </h4>
-            <p className="text-base text-gray-500 ">
-              Automatically lock doors and trunks when <br /> leaving with a
-              phone or key fob
-            </p>
-            <div className="flex items-center space-x-2 mt-2">
-              <Checkbox id="terms" className="border-none bg-gray-200 " />
-              <label
-                htmlFor="terms"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                Exclude Home
-              </label>
-            </div>
-          </div>
+        <div className="w-full ">
+          <SwitchButton
+            heading={"Walk-Away Door Lock"}
+            description={
+              "Automatically lock doors and trunks when <br /> leaving with a phone or key fob"
+            }
+          />
+          <CheckBox labell={"Exclude Home"} className={"ml-16"} />
         </div>
 
-        <div className="flex flex-row items-start rounded-lg p-2 ">
-          <Switch />
-          <div className="ml-4">
-            <h4 className="text-base text-black font-medium">
-              Driver Door Unlock Mode
-            </h4>
-            <p className="text-base text-gray-500 ">
-              Only unlock the driver door when first unlocking <br /> the
-              vehicle
-            </p>
-          </div>
-        </div>
+        <SwitchButton
+          heading={"Driver Door Unlock Mode"}
+          description={
+            "Only unlock the driver door when first unlocking the vehicle"
+          }
+        />
 
-        <div className="flex flex-row items-center justify-start rounded-lg p-2 ">
-          <Switch />
-          <div className=" ml-4">
-            <h4 className="text-base text-black font-medium">Unlock on Park</h4>
-          </div>
-        </div>
+        <SwitchButton heading={"Unlock on Park"} />
       </div>
 
       <div className="h-1 bg-gray-200 rounded-full w-[90%] my-5" />
 
-      <div className="flex flex-col max-w-[530px] justify-start items-start gap-y-3 w-full mt-4">
-        <div className="flex gap-x-2 items-center">
-          <span className="text-base font-medium">
-            Car Left Open Notifications
-          </span>
-          <PiWarningCircle className="text-[22px]  mr-2 text-gray-500" />
-        </div>
-
-        <ToggleGroup type="single" className=" w-full flex justify-start    ">
-          <ToggleGroupItem
-            value="off"
-            className="px-8 py-6 bg-gray-100 flex gap-x-2 border rounded-l w-[150px] data-[state=on]:bg-white border"
-          >
-            Off
-          </ToggleGroupItem>
-
-          <ToggleGroupItem
-            value="doors"
-            className="text-md px-8 py-6 bg-gray-100 border rounded-r w-[150px] data-[state=on]:bg-white border "
-          >
-            Doors
-          </ToggleGroupItem>
-          <ToggleGroupItem
-            value="doors and windows"
-            className="text-md px-8 py-6 bg-gray-100 border rounded-r w-[150px] data-[state=on]:bg-white border "
-          >
-            Doors & Windows
-          </ToggleGroupItem>
-        </ToggleGroup>
-        <div className="flex items-center space-x-2 mt-2">
-          <Checkbox id="terms" className="border-none bg-gray-200 " />
-          <label
-            htmlFor="terms"
-            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-          >
-            Exclude Home
-          </label>
-        </div>
-        <p>You will not be notified if your car is left open</p>
+      <div className="w-full">
+        <Buttons
+          heading={"Car Left Open Notifications"}
+          warning={true}
+          btn1={"Off"}
+          btn2={"Doors"}
+          btn3={"Doors & Windows"}
+        />
+        <CheckBox labell={"Exclude Home"} className={"mb-2"} />
+        <p className="mb-5">You will not be notified if your car is left open</p>
       </div>
 
-      <div className="flex flex-row items-center justify-start rounded-lg p-2 mt-4 ">
-        <Switch />
-        <div className=" ml-4">
-          <h4 className="text-base text-black font-medium">
-            Lock Confirmation Sound
-          </h4>
-        </div>
-      </div>
-      <div className="flex flex-row items-center justify-start rounded-lg p-2 mb-10 ">
-        <Switch />
-        <div className=" ml-4">
-          <h4 className="text-base text-black font-medium">
-            Close Windows on Lock
-          </h4>
-        </div>
-      </div>
+      <SwitchButton heading={"Lock Confirmation Sound"}  />
+      <SwitchButton heading={"Close Windows on Lock"} className={'mb-8'}/>
     </div>
   );
 }

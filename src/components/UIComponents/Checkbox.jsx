@@ -2,9 +2,9 @@ import React from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 
 
-function CheckBox({ labell }) {
+function CheckBox({ labell , className}) {
   return (
-    <div className="flex items-center space-x-2 ">
+    <div className={`flex items-center space-x-2 ${className}`}>
       <Checkbox id="terms" className="border-none bg-gray-200 " />
       {labell && (
         <label
