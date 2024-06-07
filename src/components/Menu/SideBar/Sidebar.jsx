@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MenuData } from "./MenuLinks";
 import { Menu } from "antd";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Items() {
   const [selectedKey, setSelectedKey] = useState(null);
@@ -9,36 +9,36 @@ function Items() {
   const handleItemClick = (key) => {
     setSelectedKey(key);
   };
-
-  const items = MenuData.map((item) => ({
+  return MenuData.map((item) => ({
     key: item.key,
     label: (
-      <div
-        className={`flex items-center ${
-          selectedKey === item.key ? "text-black" : "text-gray-500"
-        }`}
+      <NavLink
+        to={item.link}
+        className={({ isActive }) =>
+          `flex items-center ${isActive ? "text-black " : "text-gray-500"}`
+        }
       >
-        <div
-          className={selectedKey === item.key ? "text-black" : "text-gray-500"}
-        >
-          {item.icon}
-        </div>
-        <Link
-          to={item.link}
-          className={`ml-2 font-medium ${
-            selectedKey === item.key ? "text-black" : "text-gray-500"
-          }`}
-        >
-          {item.label}
-        </Link>
-      </div>
+        {({ isActive }) => (
+          <>
+            <div className={isActive ? "text-black" : "text-gray-500"}>
+              {item.icon}
+            </div>
+            <div
+              className={`ml-2 font-medium  ${
+                isActive ? "text-black" : "text-gray-500"
+              }`}
+            >
+              {item.label}
+            </div>
+          </>
+        )}
+      </NavLink>
     ),
     onClick: () => handleItemClick(item.key),
     style: {
       backgroundColor: selectedKey === item.key ? "white" : "transparent",
     },
   }));
-  return items;
 }
 
 function Sidebar() {
