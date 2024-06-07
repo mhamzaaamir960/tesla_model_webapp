@@ -81,10 +81,16 @@ function Display({ className, ...props }) {
         heading={"Energy Display"}
         btn1={"Percentage"}
         btn2={"Distance"}
+        className={" my-0"}
       />
       <Buttons heading={"Distance"} btn1={"Kilometers"} btn2={"Miles"} />
-      <Buttons heading={"Temprature"} btn1={"C"} btn2={"F"} />
-      <Buttons heading={"Tire Pressure"} btn1={"Bar"} btn2={"PSI"} />
+      <Buttons
+        heading={"Temprature"}
+        btn1={"C"}
+        btn2={"F"}
+        className={" my-0"}
+      />
+      <Buttons heading={"Tire Pressure"} btn1={"Bar"} btn2={"PSI"} className={' mb-5'} />
     </Container>
   );
 }
