@@ -3,9 +3,20 @@ import { ToggleGroup, ToggleGroupItem } from "../ui/toggle-group";
 import { PiWarningCircle } from "react-icons/pi";
 import { Toggle } from "../ui/toggle";
 
-function Buttons({ heading, btn1, btn2, btn3, btn4, warning, description }) {
+function Buttons({
+  heading,
+  btn1,
+  btn2,
+  btn3,
+  btn4,
+  warning,
+  description,
+  className,
+}) {
   return (
-    <div className="flex flex-col  gap-y-2  items-start my-5 gap-x-10 w-full ">
+    <div
+      className={`${className} flex flex-col  gap-y-1  items-start my-5 gap-x-10 w-full `}
+    >
       <div className="flex gap-x-2 items-center">
         {heading && <span className="font-medium">{heading}</span>}
         {warning === true && (
@@ -75,27 +86,27 @@ export function AutoButton({ btn, className }) {
 export function LongButtons({ btn1, btn2, btn3 }) {
   return (
     <ToggleGroup type="single" className="w-full flex justify-start gap-x-2 ">
-      <ToggleGroupItem>
-        {btn1 && (
+      {btn1 && (
+        <ToggleGroupItem className="data-[state=on]:bg-white">
           <button className="font-medium w-[220px]  bg-gray-200 py-3 rounded">
             {btn1}
           </button>
-        )}
-      </ToggleGroupItem>
-      <ToggleGroupItem>
-        {btn2 && (
+        </ToggleGroupItem>
+      )}
+      {btn2 && (
+        <ToggleGroupItem className="data-[state=on]:bg-white">
           <button className="font-medium w-[220px] bg-gray-200  py-3 rounded">
             {btn2}
           </button>
-        )}
-      </ToggleGroupItem>
-      <ToggleGroupItem>
-        {btn3 && (
+        </ToggleGroupItem>
+      )}
+      {btn3 && (
+        <ToggleGroupItem className="data-[state=on]:bg-white">
           <button className="font-medium w-[220px] bg-gray-200  py-3 rounded">
             {btn3}
           </button>
-        )}
-      </ToggleGroupItem>
+        </ToggleGroupItem>
+      )}
     </ToggleGroup>
   );
 }
