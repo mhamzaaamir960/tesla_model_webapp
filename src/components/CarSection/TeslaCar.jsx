@@ -3,22 +3,30 @@ import tesla from "@/assets/tesla.png";
 import { MdBolt } from "react-icons/md";
 import { useContextProvider } from "@/context/Context";
 import { FaLockOpen, FaLock } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function TeslaCar() {
-  const { isLockOpen, setIsLockOpen } = useContextProvider();
+  const { isLockOpen, setIsLockOpen, isChargingRouteOpen, setIsChargingRouteOpen } =
+    useContextProvider();
 
   return (
-    <div className="min-w-[40%] max-w-[40%] border-2 min-h-screen max-h-screen sticky top-0">
+    <div className="min-w-[40%] max-w-[40%] bg-gray-100 min-h-screen max-h-screen sticky top-0">
       <div className=" ">
-        <div className="absolute top-32 left-10">
-          <img src={tesla} alt="tesla image" width={500} />
+        <div className="absolute top-10 left-0">
+          <img
+            src={tesla}
+            alt="tesla image"
+            className="w-[2000px] h-[600px] rotate-3 "
+          />
         </div>
 
-        <div className="absolute top-[38%] right-20 cursor-pointer">
-          <MdBolt className="text-2xl" />
+        <div className="absolute top-[41%] right-28 cursor-pointer">
+          <Link onClick={() => setIsChargingRouteOpen(true)} to={"/charging"}>
+            <MdBolt className="text-2xl" />
+          </Link>
         </div>
 
-        <div className="absolute top-[22%] flex flex-col items-center gap-y-2 justify-center left-1/2 ">
+        <div className="absolute top-[24%] flex flex-col items-center gap-y-2 justify-center left-72 ">
           <div
             onClick={() => setIsLockOpen(!isLockOpen)}
             className="cursor-pointer text-xl"
@@ -28,7 +36,7 @@ function TeslaCar() {
           <div className=" w-[0.005rem] h-[60px]  bg-gray-800" />
         </div>
 
-        <div className="absolute top-[22%] flex  gap-x-2   justify-center right-32  ">
+        <div className="absolute top-[24%] flex  gap-x-2   justify-center right-40  ">
           <div className=" w-[0.005rem] h-[80px] mt-2  bg-gray-800" />
           <div className="flex flex-col items-center cursor-pointer">
             <span>Trunk</span>
@@ -36,7 +44,7 @@ function TeslaCar() {
           </div>
         </div>
 
-        <div className="absolute top-[37%] flex  gap-x-2   justify-center left-28  ">
+        <div className="absolute top-[40%] flex  gap-x-2   justify-center left-36  ">
           <div className="flex flex-col items-center cursor-pointer">
             <span>Frunk</span>
             <span className="font-medium">Open</span>

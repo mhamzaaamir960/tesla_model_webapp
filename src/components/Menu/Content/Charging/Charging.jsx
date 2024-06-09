@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Container from "@/components/UIComponents/Container";
+import { useContextProvider } from "@/context/Context";
 import teslabattery from "@/assets/teslabattery.png";
 import { MdLocationOn } from "react-icons/md";
 import { FaPlus, FaMinus } from "react-icons/fa6";
@@ -7,6 +8,7 @@ import { LongButtons } from "@/components/UIComponents/Buttons";
 
 function Charging() {
   const [counter, setCounter] = useState(32);
+  const { batteryStatus } = useContextProvider();
   return (
     <Container>
       <div className="relative top-0 flex justify-between w-full">
@@ -19,7 +21,7 @@ function Charging() {
           />
         </div>
         <span className="absolute top-12 left-12 text-3xl font-semibold">
-          30%
+          {batteryStatus}%
         </span>
       </div>
 
