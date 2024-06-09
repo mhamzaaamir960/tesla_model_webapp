@@ -1,9 +1,12 @@
 import React from "react";
 import tesla from "@/assets/tesla.png";
 import { MdBolt } from "react-icons/md";
+import { useContextProvider } from "@/context/Context";
 import { FaLockOpen, FaLock } from "react-icons/fa6";
 
 function TeslaCar() {
+  const { isLockOpen, setIsLockOpen } = useContextProvider();
+
   return (
     <div className="min-w-[40%] max-w-[40%] border-2 min-h-screen max-h-screen sticky top-0">
       <div className=" ">
@@ -16,7 +19,12 @@ function TeslaCar() {
         </div>
 
         <div className="absolute top-[22%] flex flex-col items-center gap-y-2 justify-center left-1/2 ">
-          <FaLock className="text-xl cursor-pointer" />
+          <div
+            onClick={() => setIsLockOpen(!isLockOpen)}
+            className="cursor-pointer text-xl"
+          >
+            {isLockOpen ? <FaLockOpen /> : <FaLock />}
+          </div>
           <div className=" w-[0.005rem] h-[60px]  bg-gray-800" />
         </div>
 
