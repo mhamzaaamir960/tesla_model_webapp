@@ -8,7 +8,7 @@ import { LongButtons } from "@/components/UIComponents/Buttons";
 
 function Charging() {
   const [counter, setCounter] = useState(32);
-  const { batteryStatus } = useContextProvider();
+  const { data } = useContextProvider();
   return (
     <Container>
       <div className="relative top-0 flex justify-between w-full">
@@ -21,7 +21,7 @@ function Charging() {
           />
         </div>
         <span className="absolute top-12 left-12 text-3xl font-semibold">
-          {batteryStatus}%
+          {data.batteryStatus}%
         </span>
       </div>
 

@@ -20,16 +20,14 @@ function getCurrentTime() {
 }
 
 function Navbar() {
-  const { isLockOpen, setIsLockOpen, name, batteryStatus, temp } =
-    useContextProvider();
+  const { isLockOpen, setIsLockOpen, data } = useContextProvider();
   let currentTime = getCurrentTime();
-  console.log(currentTime);
 
   return (
     <nav className="fixed top-0 w-full bg-transparent z-10 flex justify-center  ">
       <div className="flex gap-x-8 h-[50px] justify-center max-w-[90%] items-center mr-10">
         <div className="flex items-center gap-x-2">
-          <span className="font-medium text-lg">{batteryStatus}%</span>
+          <span className="font-medium text-lg">{data.batteryStatus}%</span>
           <div className="rotate-90">
             <MdBattery30 className="text-4xl text-gray-700" />
           </div>
@@ -47,7 +45,7 @@ function Navbar() {
         </div>
 
         <div>
-          <span className="font-medium">{temp}°C</span>
+          <span className="font-medium">{data.temperature}°C</span>
         </div>
 
         <div className="h-3 w-3 rounded-full bg-red-500 border-2 border-gray-200 ring-2 ring-red-500" />
@@ -60,7 +58,7 @@ function Navbar() {
             height={18}
             className="object-cover text-gray-500 "
           />
-          <span className="text-base font-medium">{name}</span>
+          <span className="text-base font-medium">{data.name}</span>
         </div>
       </div>
     </nav>

@@ -6,11 +6,15 @@ import Navbar from "./components/Navbar/Navbar";
 import context from "./context/Context";
 
 function App() {
+  const storedData = localStorage.getItem("data");
+  const initialData = storedData
+    ? JSON.parse(storedData)
+    : { name: "Sotiris", batteryStatus: "30", temperature: "16" };
+
   const [isLockOpen, setIsLockOpen] = useState(false);
   const [isChargingRouteOpen, setIsChargingRouteOpen] = useState(false);
-  const [batteryStatus, setBateryStatus] = useState("30");
-  const [temp, setTemp] = useState("16");
-  const [name, setName] = useState("Matteo");
+  const [data, setData] = useState(initialData);
+
   return (
     <context.Provider
       value={{
@@ -18,15 +22,11 @@ function App() {
         setIsLockOpen,
         isChargingRouteOpen,
         setIsChargingRouteOpen,
-        batteryStatus,
-        setBateryStatus,
-        temp,
-        setTemp,
-        name,
-        setName,
+        data,
+        setData,
       }}
     >
-      <main className="flex min-w-full  max-w-[1920px] max-h-[1200px] min-h-full ">
+      <main className="flex min-w-full max-w-[1920px] max-h-[1200px] min-h-full">
         <Navbar />
         <TeslaCar />
         <Map />

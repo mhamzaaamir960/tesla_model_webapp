@@ -1,4 +1,5 @@
 import React from "react";
+import { useContextProvider } from "@/context/Context";
 import Container from "@/components/UIComponents/Container";
 import { Slider } from "@/components/ui/slider";
 import { Toggle } from "@/components/ui/toggle";
@@ -6,10 +7,14 @@ import { cn } from "@/lib/utils";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import SelectBar from "@/components/UIComponents/Select";
 import Buttons from "@/components/UIComponents/Buttons";
+import Form from "@/components/DataChange/Form";
+import { CiMenuKebab } from "react-icons/ci";
 
 function Display({ className, ...props }) {
+  const { name, setName, batteryStatus, setBateryStatus, temp, setTemp } =
+    useContextProvider();
   return (
-    <Container className={"ml-5"}>
+    <Container className={"ml-5 relative top-0"}>
       <div className="flex flex-col  gap-y-2  items-start mt-5 gap-x-10 w-full ">
         <span className="font-medium">Appearance</span>
         <ToggleGroup
@@ -58,8 +63,9 @@ function Display({ className, ...props }) {
         </div>
       </div>
 
-      <div className="border flex justify-center bg-gray-200 py-2 w-[200px] rounded my-5">
+      <div className="border flex justify-center gap-x-2 bg-gray-200 py-2 w-[200px] rounded my-5">
         <button className="font-medium">Screen Clean Mode</button>
+        <Form TriggerIcon={<CiMenuKebab className="bg-none" />} />
       </div>
 
       <SelectBar
@@ -90,7 +96,13 @@ function Display({ className, ...props }) {
         btn2={"F"}
         className={" my-0"}
       />
-      <Buttons heading={"Tire Pressure"} btn1={"Bar"} btn2={"PSI"} className={' mb-5'} />
+
+      <Buttons
+        heading={"Tire Pressure"}
+        btn1={"Bar"}
+        btn2={"PSI"}
+        className={" mb-5"}
+      />
     </Container>
   );
 }
