@@ -125,13 +125,13 @@ const OpenLayersMap = () => {
     <div className="relative top-0 min-h-screen w-full bg-white">
       <div id="map" className="w-full h-full"></div>
       <div>
-        <div className="flex items-center bg-gray-100 p-[1.2rem] rounded absolute top-16 left-4 z-10">
-          <TbNavigationFilled className="text-[18px] cursor-pointer" />
+        <div className="flex items-center bg-gray-100 p-5 rounded absolute top-28 left-10 z-10">
+          <TbNavigationFilled className="text-2xl cursor-pointer" />
         </div>
         <div
           id="search-container"
           ref={searchContainerRef}
-          className="absolute top-16 left-24 z-10 bg-gray-100 px-4 py-2 rounded shadow flex items-center gap-x-2"
+          className="absolute top-28 left-32 z-10 bg-gray-100 px-6 py-2 rounded shadow flex items-center gap-x-2"
         >
           <IoIosSearch className="text-xl text-gray-600" />
           <input
@@ -140,18 +140,18 @@ const OpenLayersMap = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyPress={handleKeyPress}
-            className="p-2 text-gray-600 font-medium bg-inherit outline-none rounded"
+            className="p-2 text-gray-600 text-xl font-medium bg-inherit outline-none rounded"
           />
         </div>
       </div>
 
-      <div className="absolute top-16 right-10 bg-gray-200 p-2 rounded flex flex-col gap-y-4 items-center">
+      <div className="absolute top-28 right-10 bg-gray-100 p-2 rounded flex flex-col gap-y-8 items-center py-4">
         <MdLocationOn
-          className="text-black text-2xl cursor-pointer"
+          className="text-black text-5xl cursor-pointer"
           onClick={() => goToLocation([-2.2426, 53.4808])}
         />
         <MdBolt
-          className="text-xl cursor-pointer bg-gray-500 text-white rounded-full"
+          className="text-3xl cursor-pointer bg-gray-500 text-white rounded-full"
           onClick={() => goToLocation([-0.1276, 51.5074])}
         />
       </div>
