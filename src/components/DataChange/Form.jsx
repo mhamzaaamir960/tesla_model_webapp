@@ -8,12 +8,12 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogClose,
 } from "@/components/ui/dialog";
 
 function Form({ TriggerIcon }) {
   const { data, setData } = useContextProvider();
   const [formData, setFormData] = useState(data);
-
 
   useEffect(() => {
     setFormData(data);
@@ -77,10 +77,13 @@ function Form({ TriggerIcon }) {
             />
           </div>
         </div>
+
         <DialogFooter>
+          <DialogClose>Close</DialogClose>
           <button
             onClick={handleClick}
-            className="bg-black px-4 py-2 text-white rounded"
+            type="submit"
+            className="bg-black px-2 py-1 text-white rounded"
           >
             Save Changes
           </button>
