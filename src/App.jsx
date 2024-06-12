@@ -12,7 +12,11 @@ function App() {
     ? JSON.parse(storedData)
     : { name: "Sotiris", batteryStatus: "30", temperature: "16" };
 
+  const $wifi = localStorage.getItem("wifi");
+  const wifiData = $wifi ? JSON.parse($wifi) : false;
+
   const [isLockOpen, setIsLockOpen] = useState(false);
+  const [onWifi, setOnWifi] = useState(wifiData);
   const [isChargingRouteOpen, setIsChargingRouteOpen] = useState(false);
   const [data, setData] = useState(initialData);
 
@@ -21,6 +25,8 @@ function App() {
       value={{
         isLockOpen,
         setIsLockOpen,
+        onWifi,
+        setOnWifi,
         isChargingRouteOpen,
         setIsChargingRouteOpen,
         data,

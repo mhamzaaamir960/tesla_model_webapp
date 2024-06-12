@@ -4,6 +4,7 @@ import image from "@/assets/image.png";
 import { useContextProvider } from "@/context/Context";
 
 import { FaLockOpen, FaLock } from "react-icons/fa6";
+import { IoWifiOutline } from "react-icons/io5";
 
 function getCurrentTime() {
   let now = new Date();
@@ -20,12 +21,12 @@ function getCurrentTime() {
 }
 
 function Navbar() {
-  const { isLockOpen, setIsLockOpen, data } = useContextProvider();
+  const { isLockOpen, setIsLockOpen, onWifi, data } = useContextProvider();
   let currentTime = getCurrentTime();
 
   return (
-    <nav className="fixed top-2 -right-20 w-full bg-transparent z-10 flex justify-center  ">
-      <div className="flex gap-x-10 w-[900px]   h-[50px] max-w-[90%] items-center ">
+    <nav className="fixed top-2 -right-24 w-full bg-transparent z-10 flex justify-center  ">
+      <div className="flex gap-x-10 w-[940px]   h-[50px] max-w-[90%] items-center ">
         <div className="flex items-center justify-center gap-x-2 w-[180px] ">
           <span className="font-medium text-3xl">{data.batteryStatus}%</span>
           <div className="rotate-90">
@@ -61,7 +62,13 @@ function Navbar() {
           </div>
         </div>
 
-        <div className="w-fit  flex items-center justify-center ">
+        {onWifi && (
+          <div className="w-fit flex items-center justify-center ">
+            <IoWifiOutline className="text-4xl text-black cursor-pointer" />{" "}
+          </div>
+        )}
+
+        <div className="w-fit flex items-center justify-center ">
           <span className="font-medium text-3xl">{currentTime}</span>
         </div>
 
