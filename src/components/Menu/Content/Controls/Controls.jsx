@@ -25,7 +25,7 @@ function Controls({ className, ...props }) {
     <Container className={""}>
       {/* 1 */}
 
-      <div className="flex justify-between h-[80px] border w-full mt-5">
+      <div className="flex justify-between h-[90px] border w-full ">
         <ToggleGroup type="single" className="h-full w-full flex justify-start">
           <ToggleGroupItem
             value="off"
@@ -75,7 +75,7 @@ function Controls({ className, ...props }) {
         </Toggle>
       </div>
 
-      <div className="flex justify-between h-[160px] w-full  mt-8 ">
+      <div className="flex justify-between h-[170px] w-full  mt-8 ">
         <ToggleGroup type="single" className=" rounded-2xl">
           <ToggleGroupItem
             value="fold mirrors"
@@ -160,7 +160,7 @@ function Controls({ className, ...props }) {
       </div>
 
       <div className="flex gap-x-2 w-full justify-between">
-        <div className="flex flex-col justify-center  mt-8  h-[280px]   ">
+        <div className="flex flex-col justify-center  mt-8  h-[290px]   ">
           <ToggleGroup
             type="single"
             className=" rounded-2xl flex flex-col justify-between gap-x-8  h-full"
