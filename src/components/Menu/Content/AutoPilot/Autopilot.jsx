@@ -70,7 +70,7 @@ function Autopilot() {
       <Buttons heading={"Speed Limit"} btn1={"Relative"} btn2={"Absolute"} />
 
       <div className="flex  flex-col gap-y-2 w-[65%]  mt-4  mb-10">
-        <span className="font-medium  text-2xl">Offset</span>
+        <span className="font-medium  text-3xl">Offset</span>
         <div className="min-w-[250px]  self-start p-2 flex items-center justify-between border bg-gray-200 rounded">
           <FaMinus
             onClick={() => setCounter2(counter2 - 1)}

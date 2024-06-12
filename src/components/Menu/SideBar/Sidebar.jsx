@@ -18,7 +18,7 @@ function Sidebar() {
                 {item.icon}
               </div>
               <div
-                className={`ml-2 font-medium text-2xl  ${
+                className={`ml-2 font-medium text-3xl  ${
                   isActive ? "text-black" : "text-gray-500"
                 }`}
               >

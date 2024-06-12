@@ -12,19 +12,19 @@ import {
 function SelectBar({ heading, description, className }) {
   return (
     <div
-      className={`${className} w-full flex  flex-col gap-y-2 justify-start mt-5`}
+      className={`${className} w-full flex  flex-col gap-y-4 justify-start mt-5`}
     >
-      {heading && <span className="font-medium">{heading}</span>}
-      <Select className="border-none ">
-        <SelectTrigger className="w-[180px]">
+      {heading && <span className="font-medium text-2xl">{heading}</span>}
+      <Select className="border-none">
+        <SelectTrigger className="w-[250px] text-xl py-6 ">
           <SelectValue placeholder="English" />
         </SelectTrigger>
-        <SelectContent className='text-xl'>
-          <SelectGroup>
-            <SelectLabel>
-              <span className="text-4xl">Select Language</span>
+        <SelectContent >
+          <SelectGroup >
+            <SelectLabel className='  '>
+              <span className="text-xl">Select Language</span>
             </SelectLabel>
-            <SelectItem value="apple">English</SelectItem>
+            <SelectItem value="apple" >English</SelectItem>
             <SelectItem value="banana">Spanish</SelectItem>
             <SelectItem value="blueberry">Chinese</SelectItem>
             <SelectItem value="grapes">Arabic</SelectItem>
@@ -32,7 +32,7 @@ function SelectBar({ heading, description, className }) {
           </SelectGroup>
         </SelectContent>
       </Select>
-      {description && <p>{description}</p>}
+      {description && <p className="text-xl">{description}</p>}
     </div>
   );
 }

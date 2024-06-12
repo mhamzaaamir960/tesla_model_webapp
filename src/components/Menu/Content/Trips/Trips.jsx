@@ -4,7 +4,7 @@ import Container from "@/components/UIComponents/Container";
 
 function Trips() {
   return (
-    <Container className={"mt-5 ml-5 gap-y-10"}>
+    <Container className={" gap-y-20"}>
       <TripsData
         TripTitle={"Current Trip"}
         distance={"8"}
@@ -32,19 +32,19 @@ function Trips() {
         className={"text-purple-600"}
       />
 
-      <div className="w-full flex flex-col items-start justify-center gap-y-6 mb-10">
+      <div className="w-full flex flex-col items-start justify-center gap-y-6 mb-20">
         <div className="font-medium flex gap-x-24">
-          <span>Odometer</span>
-          <span>6,863 km</span>
+          <span className="text-2xl">Odometer</span>
+          <span className="text-2xl">6,863 km</span>
         </div>
-        <div className="w-[80%] flex justify-start gap-x-6">
-          <button className="text-sm font-medium  rounded w-[130px] border bg-gray-200 px-5 py-1">
+        <div className="w-full flex justify-start gap-x-6">
+          <button className="text-2xl w-[200px] font-medium  rounded w-[130px] border bg-gray-200 px-5 py-2">
             Reset Current Trip
           </button>
-          <button className="text-sm font-medium  rounded w-[130px] border bg-gray-200 px-10 py-1">
+          <button className="text-2xl w-[170px] font-medium  rounded w-[130px] border bg-gray-200 px-10 py-2">
             Reset Trip A
           </button>
-          <button className="text-sm font-medium  rounded w-[130px] border bg-gray-200 px-10 py-1">
+          <button className="text-2xl w-[170px] font-medium  rounded w-[130px] border bg-gray-200 px-10 py-2">
             Reset Trip B
           </button>
         </div>

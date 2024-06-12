@@ -19,9 +19,9 @@ function Buttons({
       className={`${className} flex flex-col gap-y-4 mb-6  items-start  gap-x-10 w-full`}
     >
       <div className="flex gap-x-2 items-center">
-        {heading && <span className="font-medium text-2xl">{heading}</span>}
+        {heading && <span className="font-medium text-3xl">{heading}</span>}
         {warning === true && (
-          <PiWarningCircle className="text-[22px]  mr-2 text-gray-800" />
+          <PiWarningCircle className="text-3xl  mr-2 text-gray-800" />
         )}
       </div>
       <ToggleGroup type="single" className="w-fit h-[90px]  border rounded">
@@ -93,14 +93,14 @@ export function LongButtons({ btn1, btn2, btn3, className }) {
     >
       {btn1 && (
         <ToggleGroupItem className="data-[state=on]:bg-white ">
-          <button className="font-medium w-[220px] border  bg-gray-200 py-3 rounded">
+          <button className="font-medium text-2xl w-[300px] border  bg-gray-200 py-3 rounded">
             {btn1}
           </button>
         </ToggleGroupItem>
       )}
       {btn2 && (
         <ToggleGroupItem className="data-[state=on]:bg-white">
-          <button className="font-medium w-[220px] border bg-gray-200  py-3 rounded">
+          <button className="font-medium text-2xl w-[300px] border bg-gray-200  py-3 rounded">
             {btn2}
           </button>
         </ToggleGroupItem>

@@ -8,26 +8,26 @@ function Navigation() {
   const [vol, setVol] = useState(50);
   const [counter, setCounter] = useState(5);
   return (
-    <Container className={"mt-5 ml-5"}>
+    <Container className={""}>
       <div className="flex flex-col gap-y-2 mb-10">
-        <span className="font-medium">Navigation Volume </span>
-        <div className="w-[50%]  flex justify-between ">
-          <div className="w-[75%] py-4 px-3 border rounded bg-gray-200">
+        <span className="font-medium text-3xl">Navigation Volume </span>
+        <div className="w-[500px] mt-2  flex justify-between ">
+          <div className="w-[75%] py-8 px-4 border rounded bg-gray-200">
             <div className="flex items-center gap-x-4 text-xl">
               <FaMinus
                 onClick={() => setVol(vol - 5)}
-                className="cursor-pointer"
+                className="cursor-pointer text-4xl"
               />
               <div className={`h-2 rounded w-full bg-gray-400 `}>
                 <div
-                  className={`w-[${vol}%] h-full rounded   ${
+                  className={`w-[${vol}%] text-xl h-full rounded   ${
                     volume === true && "bg-gray-800"
                   }`}
                 />
               </div>
               <FaPlus
                 onClick={() => setVol(vol + 5)}
-                className="cursor-pointer"
+                className="cursor-pointer text-4xl"
               />
             </div>
           </div>
@@ -35,7 +35,7 @@ function Navigation() {
             onClick={() => setVolume(!volume)}
             className="w-[20%] flex items-center justify-center  py-4 px-6 bg-gray-200"
           >
-            <div className="text-2xl cursor-pointer">
+            <div className="text-4xl cursor-pointer">
               {volume ? <FaVolumeHigh className="" /> : <FaVolumeXmark />}
             </div>
           </div>
@@ -56,26 +56,26 @@ function Navigation() {
       />
 
       <div className="flex  flex-col  items-center gap-y-2 w-[55%]  mt-4  mb-10">
-        <p className="mr-40">Route to save</p>
-        <div className="min-w-[250px] p-2 flex   items-center justify-between border bg-gray-200 rounded">
+        <p className="mr-28 text-2xl">Route to save</p>
+        <div className="min-w-[250px] py-4 px-3 flex   items-center justify-between border bg-gray-200 rounded">
           <FaMinus
             onClick={() => setCounter(counter - 1)}
-            className="text-xl text-gray-500 hover:text-gray-700 cursor-pointer "
+            className="text-4xl text-gray-500 hover:text-gray-700 cursor-pointer "
           />
-          <span className="font-medium">+{counter} min</span>
+          <span className="font-medium text-2xl">+{counter} min</span>
 
           <FaPlus
             onClick={() => setCounter(counter + 1)}
-            className="text-xl text-gray-500 hover:text-gray-700 cursor-pointer  "
+            className="text-4xl text-gray-500 hover:text-gray-700 cursor-pointer  "
           />
         </div>
       </div>
 
       <SwitchButton heading={"Avoid Ferries"} />
-      <SwitchButton heading={"Avoid Tolls"} />
+      <SwitchButton heading={"Avoid Tolls"}  className={'my-4'}/>
       <SwitchButton heading={"Use HOV Lanes"} />
 
-      <div className="mb-10" />
+      <div className="mb-28" />
     </Container>
   );
 }

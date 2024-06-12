@@ -11,10 +11,8 @@ import Form from "@/components/DataChange/Form";
 import { CiMenuKebab } from "react-icons/ci";
 
 function Display({ className, ...props }) {
-  const { name, setName, batteryStatus, setBateryStatus, temp, setTemp } =
-    useContextProvider();
   return (
-    <Container className={"ml-5 relative top-0"}>
+    <Container className={" relative top-0"}>
       <Buttons
         heading={"Appearance"}
         btn1={"Light"}
@@ -80,7 +78,7 @@ function Display({ className, ...props }) {
         heading={"Tire Pressure"}
         btn1={"Bar"}
         btn2={"PSI"}
-        className={" mb-5"}
+        className={"mb-28"}
       />
     </Container>
   );
