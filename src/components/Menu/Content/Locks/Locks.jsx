@@ -10,44 +10,44 @@ import Container from "@/components/UIComponents/Container";
 
 function Locks() {
   return (
-    <Container className={"mt-5 ml-5"}>
+    <Container>
       <div className="flex justify-between items-center">
-        <span className="font-medium text-lg">Keys</span>
+        <span className="font-medium text-2xl">Keys</span>
         <div className="bg-gray-200 p-4 rounded cursor-pointer">
-          <FaPlus className=" text-lg text-gray-700 " />
+          <FaPlus className=" text-2xl text-gray-700 " />
         </div>
       </div>
-      <span className="flex w-full justify-center text-gray-800">
+      <span className="flex w-full justify-center text-gray-800 text-xl">
         No keys available
       </span>
 
       <div className="flex items-center my-10  ">
         <ToggleGroup
           type="single"
-          className=" rounded-2xl flex justify-between gap-x-8  min-w-[525px]"
+          className=" rounded-2xl flex justify-between gap-x-8 h-[60px]  min-w-[525px]"
         >
           <ToggleGroupItem
             value="fold mirrors"
-            className="py-6 rounded border rounded-l w-[250px] data-[state=on]:bg-white "
+            className="w-[300px] h-full  rounded border rounded-l  data-[state=on]:bg-white  border border-gray-300 "
           >
             <div className="flex items-center justify-evenly gap-x-5  w-full ">
               <div className="w-10 h-10 mt-2">
-                <img src={windowicon} alt="window icon" width={30} />
+                <img src={windowicon} alt="window icon" width={50} />
               </div>
 
-              <span className="text-sm ">Window Lock</span>
+              <span className="text-2xl">Window Lock</span>
             </div>
           </ToggleGroupItem>
 
           <ToggleGroupItem
             value="child lock"
-            className="py-6 rounded border rounded-l data-[state=on]:bg-white  w-[250px]"
+            className="w-[300px] h-full rounded border rounded-l data-[state=on]:bg-white  border border-gray-300 "
           >
             <div className="flex items-center gap-x-5 flex items-center justify-evenly w-full ">
-              <div className="w-10 h-10 mt-2">
-                <img src={childlockicon} alt="child icon" width={25} />
+              <div className="w-10 h-10  flex justify-center items-center">
+                <img src={childlockicon} alt="child icon" width={35} />
               </div>
-              <span className="text-sm shrink-0">Child Lock </span>
+              <span className="text-2xl shrink-0">Child Lock </span>
             </div>
           </ToggleGroupItem>
         </ToggleGroup>
@@ -58,10 +58,10 @@ function Locks() {
           <SwitchButton
             heading={"Walk-Away Door Lock"}
             description={
-              "Automatically lock doors and trunks when <br /> leaving with a phone or key fob"
+              "Automatically lock doors and trunks when leaving with a phone or key fob"
             }
           />
-          <CheckBox labell={"Exclude Home"} className={"ml-16"} />
+          <CheckBox labell={"Exclude Home"} className={"ml-20"} />
         </div>
 
         <SwitchButton
@@ -91,7 +91,7 @@ function Locks() {
       </div>
 
       <SwitchButton heading={"Lock Confirmation Sound"} />
-      <SwitchButton heading={"Close Windows on Lock"} className={"mb-8"} />
+      <SwitchButton heading={"Close Windows on Lock"} className={"mb-20"}  />
     </Container>
   );
 }

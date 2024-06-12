@@ -5,7 +5,7 @@ import SwitchButton from "@/components/UIComponents/SwitchButton";
 
 function PedalsStreeing() {
   return (
-    <Container className={"ml-5 mt-5"}>
+    <Container className={" mt-5"}>
       {/* 1 */}
       <Buttons heading={"Acceleration"} btn1={"Chill"} btn2={"Standard"} />
 
@@ -27,12 +27,15 @@ function PedalsStreeing() {
           "Maximizes range by extending regenerative braking to lower speeds and automatically blends in brakes to hold the vehicle at a stop"
         }
       />
-      {/* <div className="h-1 bg-gray-200 rounded-full w-[90%]  " /> */}
+      <div className="h-1 bg-gray-200 rounded-full w-[90%]  my-2 " />
 
+      <SwitchButton heading={"Off-Road Assist"} warning={true} />
       <SwitchButton
         heading={"Slip Start"}
         description={"Use to help free vehicle stuck in snow, sand, or mud."}
+        className={'my-2'}
       />
+      <SwitchButton heading={"Traller Mode"} warning={true} />
     </Container>
   );
 }

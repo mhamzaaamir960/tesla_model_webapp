@@ -16,52 +16,52 @@ function Buttons({
 }) {
   return (
     <div
-      className={`${className} flex flex-col  gap-y-1  items-start my-5 gap-x-10 w-full `}
+      className={`${className} flex flex-col gap-y-4 mb-6  items-start  gap-x-10 w-full`}
     >
       <div className="flex gap-x-2 items-center">
-        {heading && <span className="font-medium text-base">{heading}</span>}
+        {heading && <span className="font-medium text-2xl">{heading}</span>}
         {warning === true && (
-          <PiWarningCircle className="text-[22px]  mr-2 text-gray-500" />
+          <PiWarningCircle className="text-[22px]  mr-2 text-gray-800" />
         )}
       </div>
-      <ToggleGroup type="single" className="w-fit  border rounded">
+      <ToggleGroup type="single" className="w-fit h-[90px]  border rounded">
         {btn1 && (
           <ToggleGroupItem
             value={btn1}
-            className="w-[150px] py-6 flex gap-x-2 border text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
+            className="min-w-[170px] h-full  flex gap-x-2 border text-gray-800 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
           >
             {img1 && <img src={img1} alt="wiper icon" width={50} height={50} />}
-            <span>{btn1}</span>
+            <span className="text-2xl font-medium">{btn1}</span>
           </ToggleGroupItem>
         )}
         {btn2 && (
           <ToggleGroupItem
             value={btn2}
-            className="w-[150px] py-6 flex gap-x-2 border text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
+            className="min-w-[170px] h-full py-6 flex gap-x-2 border text-gray-800 data-[state=on]:text-black   data-[state=on]:bg-white"
           >
-            <span>{btn2}</span>
+            <span className="text-2xl font-medium">{btn2}</span>
           </ToggleGroupItem>
         )}
 
         {btn3 && (
           <ToggleGroupItem
             value={btn3}
-            className="w-[150px] py-6 flex gap-x-2 border text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
+            className="min-w-[170px] h-full flex gap-x-2 border text-gray-800 data-[state=on]:text-black  data-[state=on]:bg-white"
           >
-            <span>{btn3}</span>
+            <span className="text-2xl font-medium">{btn3}</span>
           </ToggleGroupItem>
         )}
 
         {btn4 && (
           <ToggleGroupItem
             value={btn4}
-            className="w-[150px] py-6 flex gap-x-2 border  text-gray-500 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
+            className="min-w-[170px] h-full  flex gap-x-2 border  text-gray-800 data-[state=on]:text-black rounded-l  data-[state=on]:bg-white"
           >
-            <span>{btn4}</span>
+            <span className="text-2xl font-medium">{btn4}</span>
           </ToggleGroupItem>
         )}
       </ToggleGroup>
-      {description && <p className="w-[80%]">{description}</p>}
+      {description && <p className="w-[80%] text-xl text-gray-800">{description}</p>}
     </div>
   );
 }

@@ -8,34 +8,34 @@ import SwitchButton from "@/components/UIComponents/SwitchButton";
 
 function Lights() {
   return (
-    <Container className={' ml-5'}>
-      <div className="flex flex-col  gap-y-2  items-start mt-5 gap-x-10 w-full ">
-        <span className="font-medium">Headlights</span>
+    <Container>
+      <div className="flex flex-col  gap-y-2 mb-4  gap-x-10 w-full  ">
+        <span className="font-medium text-2xl">Headlights</span>
         <ToggleGroup
           type="single"
-          className=" w-fit rounded-2xl border rounded"
+          className=" border rounded h-[80px] w-full flex justify-start"
         >
           <ToggleGroupItem
             value="off"
-            className="px-8 py-6 flex gap-x-2 w-fit  rounded-l  data-[state=on]:bg-white"
+            className="w-[150px] h-full border border-gray-300 flex gap-x-2    rounded-l  data-[state=on]:bg-white"
           >
-            <span>Off</span>
+            <span className="text-2xl">Off</span>
           </ToggleGroupItem>
           <ToggleGroupItem
             value="b"
-            className="px-8 py-6 data-[state=on]:bg-white"
+            className="w-[150px] h-full border border-gray-300 data-[state=on]:bg-white"
           >
-            <img src={light} alt="light icon" width={24} style={{}} />
+            <img src={light} alt="light icon" width={35} style={{}} />
           </ToggleGroupItem>
           <ToggleGroupItem
             value="c"
-            className="px-8 py-6 data-[state=on]:bg-white "
+            className="w-[150px] border border-gray-300 h-full data-[state=on]:bg-white "
           >
-            <PiHeadlightsLight className="scale-x-[-1] text-3xl text-gray-800" />
+            <PiHeadlightsLight className="scale-x-[-1] text-4xl text-gray-800" />
           </ToggleGroupItem>
           <ToggleGroupItem
             value="auto"
-            className="text-md px-8 py-6  rounded-r data-[state=on]:bg-white"
+            className="text-xl w-[150px] border border-gray-300 h-full rounded-r data-[state=on]:bg-white"
           >
             Auto
           </ToggleGroupItem>

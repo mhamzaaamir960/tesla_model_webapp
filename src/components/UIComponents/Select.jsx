@@ -19,9 +19,11 @@ function SelectBar({ heading, description, className }) {
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="English" />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent className='text-xl'>
           <SelectGroup>
-            <SelectLabel>Select Language</SelectLabel>
+            <SelectLabel>
+              <span className="text-4xl">Select Language</span>
+            </SelectLabel>
             <SelectItem value="apple">English</SelectItem>
             <SelectItem value="banana">Spanish</SelectItem>
             <SelectItem value="blueberry">Chinese</SelectItem>

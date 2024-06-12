@@ -31,17 +31,17 @@ function Autopilot() {
         className={"gap-y-2"}
       />
 
-      <div className="flex w-[65%]  mt-4 ">
-        <div className="min-w-[300px]  self-start p-2 flex items-center justify-between border bg-gray-200 rounded">
+      <div className="flex w-[70%]   mt-4 ">
+        <div className="min-w-[400px] h-[60px]  self-start p-2 flex items-center justify-between border bg-gray-200 rounded">
           <FaMinus
             onClick={() => setCounter(counter - 1)}
-            className="text-xl text-gray-500 hover:text-gray-700 cursor-pointer "
+            className="text-4xl text-gray-500 hover:text-gray-700 cursor-pointer "
           />
-          <span className="font-medium">+{counter} km/h</span>
+          <span className="font-medium text-3xl">+{counter} km/h</span>
 
           <FaPlus
             onClick={() => setCounter(counter + 1)}
-            className="text-xl text-gray-500 hover:text-gray-700 cursor-pointer  "
+            className="text-4xl text-gray-500 hover:text-gray-700 cursor-pointer  "
           />
         </div>
       </div>
@@ -70,17 +70,17 @@ function Autopilot() {
       <Buttons heading={"Speed Limit"} btn1={"Relative"} btn2={"Absolute"} />
 
       <div className="flex  flex-col gap-y-2 w-[65%]  mt-4  mb-10">
-        <span className="font-medium ">Offset</span>
+        <span className="font-medium  text-2xl">Offset</span>
         <div className="min-w-[250px]  self-start p-2 flex items-center justify-between border bg-gray-200 rounded">
           <FaMinus
             onClick={() => setCounter2(counter2 - 1)}
-            className="text-xl text-gray-500 hover:text-gray-700 cursor-pointer "
+            className="text-2xl text-gray-500 hover:text-gray-700 cursor-pointer "
           />
-          <span className="font-medium">+{counter2} km/h</span>
+          <span className="font-medium text-2xl">+{counter2} km/h</span>
 
           <FaPlus
             onClick={() => setCounter2(counter2 + 1)}
-            className="text-xl text-gray-500 hover:text-gray-700 cursor-pointer  "
+            className="text-2xl text-gray-500 hover:text-gray-700 cursor-pointer  "
           />
         </div>
       </div>
