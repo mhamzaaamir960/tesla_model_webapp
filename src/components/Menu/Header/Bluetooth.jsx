@@ -23,33 +23,33 @@ function Bluetooth() {
           <IoIosBluetooth className="text-4xl text-gray-500 cursor-pointer" />{" "}
         </button>
       </DialogTrigger>
-      <DialogContent className="w-[800px] absolute -right-72 top-[22rem] p-5 bg-white">
-        <DialogHeader className="">
-          <div className="flex justify-between items-center">
+      <DialogContent className="min-w-[1000px] absolute -right-96 top-[30rem] p-5 bg-white">
+        <DialogHeader className="w-full">
+          <div className="flex justify-between items-center w-full">
             <DialogClose>
-              <IoMdClose className=" text-[22px]  rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100  hover:text-gray-500  disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground" />
+              <IoMdClose className=" text-4xl rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100  hover:text-gray-500  disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground" />
             </DialogClose>
-            <DialogTitle className="text-lg font-medium">
+            <DialogTitle className="text-3xl font-medium">
               Bluetooth Settings
             </DialogTitle>
             <div>
-              <PiWarningCircle className="text-[22px]  mr-2 text-gray-500" />
+              <PiWarningCircle className="text-4xl  mr-2 text-gray-500" />
             </div>
           </div>
         </DialogHeader>
 
         {/* body */}
-        <div className="h-[2px] bg-gray-100 rounded" />
+        <div className="h-[2px] w-[800px] bg-gray-100 rounded " />
         <div className="flex gap-x-4">
-          <div className="w-[400px]  h-fit  items-center">
+          <div className="w-[500px]  h-fit  items-center">
             <div className="flex justify-between w-full">
-              <h4 className="text-base font-medium">Add new Device</h4>
-              <IoIosAdd className="text-2xl font-semibold mt-1 cursor-pointer" />
+              <h4 className="text-3xl font-medium">Add new Device</h4>
+              <IoIosAdd className="text-4xl font-semibold mt-1 cursor-pointer" />
             </div>
-            <p className="text-sm mt-4 text-gray-500">No devices connected</p>
+            <p className="text-xl mt-4 text-gray-500">No devices connected</p>
           </div>
 
-          <div>
+          <div className="w-full flex flex-col ">
             <div>
               <div className="space-y-4 ">
                 <SwitchButton
@@ -67,16 +67,17 @@ function Bluetooth() {
                   }
                 />
 
-                <p className="text-base mt-5 ml-5 text-black font-medium">
+                <p className="text-2xl mt-5 ml-5 text-black font-medium">
                   Chime on new Message
                 </p>
               </div>
             </div>
+
             <div className="flex w-full justify-evenly mt-16">
-              <button className="border text-sm px-8 rounded py-2 font-medium">
+              <button className="border  text-2xl px-8 rounded py-2 font-medium">
                 Forget Device
               </button>
-              <button className="border text-sm px-8 rounded py-2 font-medium">
+              <button className="border text-2xl px-8 rounded py-2 font-medium">
                 Disconnect
               </button>
             </div>

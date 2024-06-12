@@ -7,9 +7,9 @@ function TripsData({ TripTitle, className, distance, duration, avgEnergy }) {
         <span className={`font-medium text-3xl ${className}`}>{TripTitle}</span>
       )}
       <div className="w-full flex justify-between">
-        <span className="text-gray-500 text-2xl">Distance</span>
-        <span className="text-gray-500 text-2xl">Duration</span>
-        <span className="text-gray-500 text-2xl">Avg. Energy</span>
+        <span className="text-gray-500 text-3xl">Distance</span>
+        <span className="text-gray-500 text-3xl">Duration</span>
+        <span className="text-gray-500 text-3xl">Avg. Energy</span>
       </div>
 
       <div className="w-full flex justify-between">

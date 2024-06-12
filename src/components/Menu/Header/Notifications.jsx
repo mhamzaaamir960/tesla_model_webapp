@@ -24,14 +24,14 @@ function Notifications() {
           />
         </button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="absolute -top-1 -right-40 mr-8 p-4 w-full">
-        <DropdownMenuLabel className="text-balck font-medium text-lg">
+      <DropdownMenuContent className="absolute -top-1 -right-40 mr-8 p-4 w-[600px]">
+        <DropdownMenuLabel className="text-balck font-medium text-3xl">
           Alerts
         </DropdownMenuLabel>
-        <DropdownMenuSeparator className="mb-4" />
-        <span className="text-gray-500 ">Active Alerts</span>
-        <br />
-        <p className="ml-10 w-fit">There are no active alerts</p>
+        <DropdownMenuSeparator className="mb-4 bg-gray-300 h-1 " />
+        <span className="text-gray-500  text-2xl">Active Alerts</span>
+
+        <p className="ml-10 text-xl mt-1 w-fit">There are no active alerts</p>
       </DropdownMenuContent>
     </DropdownMenu>
   );

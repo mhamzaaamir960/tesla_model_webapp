@@ -104,7 +104,7 @@ function Autopilot() {
       <SwitchButton heading={"Emergency Lane Departure Avoidance"} />
       <SwitchButton heading={"Automatic Emergency Braking"} />
       <SwitchButton heading={" Obstacle-Aware Acceleration"} warning={true} />
-      <SwitchButton heading={"Traffic-Aware Cruise Control Chime"} />
+      <SwitchButton heading={"Traffic-Aware Cruise Control Chime"} className={'mb-28'} />
     </Container>
   );
 }

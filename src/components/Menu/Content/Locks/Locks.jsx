@@ -85,7 +85,7 @@ function Locks() {
           btn3={"Doors & Windows"}
         />
         <CheckBox labell={"Exclude Home"} className={"mb-2"} />
-        <p className="mb-5">
+        <p className="mb-5 text-xl">
           You will not be notified if your car is left open
         </p>
       </div>

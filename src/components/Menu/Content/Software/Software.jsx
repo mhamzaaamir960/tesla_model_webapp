@@ -48,8 +48,8 @@ function Software() {
             v11.0(2022.4.5.17 31c9063b01aa)
           </span>
           <span className="mt-5 mb-2 font-medium  text-2xl">Navigation Data</span>
-          <span className=" mb-3 text-2xl">NA-2021.44-13555</span>
-          <p className="text-2xl">Your car software is up to date as of 5 Apr 3:32 pm</p>
+          <span className=" mb-8 text-2xl">NA-2021.44-13555</span>
+          <p className="text-2xl mb-3">Your car software is up to date as of 5 Apr 3:32 pm</p>
         </div>
 
         <Buttons

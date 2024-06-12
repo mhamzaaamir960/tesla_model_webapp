@@ -80,10 +80,10 @@ export function AutoButton({ btn, className }) {
       {" "}
       {btn && (
         <Toggle
-          className={` py-6 w-[100px] data-[state=on]:bg-blue-500 data-[state=on]:text-white border rounded ${className}`}
+          className={`text-xl py-6 h-[90px] border border-gray-300 w-[200px] data-[state=on]:bg-blue-500 text-gray-800 data-[state=on]:text-white border rounded ${className}`}
         >
-          <div>
-            <span className="">{btn}</span>
+          <div className="flex" >
+            <span className="text-2xl   shrink-0">{btn}</span>
           </div>
         </Toggle>
       )}

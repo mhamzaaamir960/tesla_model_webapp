@@ -34,8 +34,8 @@ function Trips() {
 
       <div className="w-full flex flex-col items-start justify-center gap-y-6 mb-20">
         <div className="font-medium flex gap-x-24">
-          <span className="text-2xl">Odometer</span>
-          <span className="text-2xl">6,863 km</span>
+          <span className="text-3xl">Odometer</span>
+          <span className="text-3xl">6,863 km</span>
         </div>
         <div className="w-full flex justify-start gap-x-6">
           <button className="text-2xl w-[200px] font-medium  rounded w-[130px] border bg-gray-200 px-5 py-2">

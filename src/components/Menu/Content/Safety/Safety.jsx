@@ -78,7 +78,7 @@ function Safety() {
         </div>
       </div>
 
-      <div className="flex w-[87%] justify-center items-center">
+      <div className="flex w-full gap-x-4 justify-center items-center">
         <Buttons
           heading={"Dashcam"}
           warning={true}
@@ -86,7 +86,7 @@ function Safety() {
           btn2={"Manual"}
           btn3={"Auto"}
         />
-        <AutoButton btn={"On Honk"} className={"mt-7"} />
+        <AutoButton btn={"On Honk"} className={"mt-7 "} />
       </div>
 
       <div className="my-5">

@@ -27,7 +27,7 @@ function App() {
         setData,
       }}
     >
-      <main className="flex min-w-full max-w-[1920px] max-h-[1200px] min-h-full">
+      <main className="flex min-w-[1920px] max-w-[1920px] max-h-[1200px] min-h-[1200px]">
         <Navbar />
         <TeslaCar />
         <Map />
