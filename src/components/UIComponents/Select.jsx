@@ -12,11 +12,11 @@ import {
 function SelectBar({ heading, description, className }) {
   return (
     <div
-      className={`${className} w-full flex  flex-col gap-y-4 justify-start mt-5`}
+      className={`${className} w-full flex  flex-col gap-y-4 justify-start mt-8`}
     >
       {heading && <span className="font-medium text-2xl">{heading}</span>}
       <Select className="border-none">
-        <SelectTrigger className="w-[250px] text-xl py-6 ">
+        <SelectTrigger className="w-[300px] text-2xl py-6 ">
           <SelectValue placeholder="English" />
         </SelectTrigger>
         <SelectContent >

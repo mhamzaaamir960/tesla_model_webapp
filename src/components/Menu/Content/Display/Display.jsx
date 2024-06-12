@@ -20,8 +20,8 @@ function Display({ className, ...props }) {
         btn3={"Auto"}
       />
 
-      <div className="mt-5 flex flex-col gap-y-2">
-        <span className="font-medium text-2xl">Brightness</span>
+      <div className="my-5 flex flex-col gap-y-2">
+        <span className="font-medium text-3xl">Brightness</span>
         <div className="w-[525px] flex justify-between gap-x-4 ">
           <Slider
             defaultValue={[70]}
@@ -40,9 +40,9 @@ function Display({ className, ...props }) {
         </div>
       </div>
 
-      <div className="border flex justify-center gap-x-2 bg-gray-200 py-2 w-[250px] rounded my-5 h-[60px]">
-        <button className="font-medium text-xl">Screen Clean Mode</button>
-        <Form TriggerIcon={<CiMenuKebab className="bg-none text-xl" />} />
+      <div className="border flex justify-center gap-x-2 bg-gray-200 py-2 w-[300px] rounded my-5  h-[60px]">
+        <button className="font-medium text-2xl">Screen Clean Mode</button>
+        <Form TriggerIcon={<CiMenuKebab className="bg-none text-2xl" />} />
       </div>
 
       <SelectBar
@@ -59,7 +59,7 @@ function Display({ className, ...props }) {
         className={"mb-5"}
       />
 
-      <Buttons heading={"Time"} btn1={"12 Hour"} btn2={"24 Hour"} />
+      <Buttons className={'mt-8'} heading={"Time"} btn1={"12 Hour"} btn2={"24 Hour"} />
       <Buttons
         heading={"Energy Display"}
         btn1={"Percentage"}
