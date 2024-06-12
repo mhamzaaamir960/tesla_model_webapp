@@ -24,8 +24,8 @@ export const MenuData = [
         <IoCarSportSharp className="text-[35px]  mr-2" />
       </div>
     ),
-    label: "Pedals & Steering",
-    link: "/pedals-steering",
+    label: "Dynamics",
+    link: "/dynamics",
   },
   {
     key: "3",

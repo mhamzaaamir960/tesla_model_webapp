@@ -5,11 +5,11 @@ import { NavLink } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <div className="w-[400px] h-[84vh]  p-4 flex flex-col gap-y-2 ">
+    <div className="w-[420px] h-[85vh]  px-10 py-5 flex flex-col gap-y-2 ">
       {MenuData.map((item) => (
         <NavLink to={item.link} key={item.key} >
           {({ isActive }) => (
-            <div className={`flex gap-x-2 px-4 py-4 -xl ${isActive ? "bg-white rounded-xl" : "bg-gray-100"}`}>
+            <div className={`flex gap-x-4 px-4 py-4 -xl ${isActive ? "bg-white rounded-xl" : "bg-gray-100"}`}>
               <div
                 className={` ${
                   isActive ? "text-black" : "text-gray-500"
@@ -18,7 +18,7 @@ function Sidebar() {
                 {item.icon}
               </div>
               <div
-                className={`ml-2 font-medium text-3xl  ${
+                className={`ml-2 font-medium text-2xl  ${
                   isActive ? "text-black" : "text-gray-500"
                 }`}
               >

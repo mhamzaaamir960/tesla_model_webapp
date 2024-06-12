@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         element: <Controls />,
       },
       {
-        path: "pedals-steering",
+        path: "dynamics",
         element: <PedalsStreeing />,
       },
       {

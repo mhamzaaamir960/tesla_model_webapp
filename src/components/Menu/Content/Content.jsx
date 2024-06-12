@@ -6,7 +6,7 @@ const { Content } = Layout;
 function ContentData({ children }) {
   return (
     <div
-      className="bg-gray-100 h-[80vh] w-full max-w-[750px] border border-blue-300 overflow-y-scroll"
+      className="bg-gray-100 h-[83vh] w-full max-w-[710px] overflow-y-scroll"
       style={{
         WebkitOverflowScrolling: "touch",
         overflowY: "scroll",

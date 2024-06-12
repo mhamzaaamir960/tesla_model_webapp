@@ -13,12 +13,12 @@ const Slider = React.forwardRef(({ className, ...props }, ref) => (
     className={cn("relative flex w-full touch-none select-none items-center ", className)}
     {...props}>
     <SliderPrimitive.Track
-      className="relative h-1 w-full grow overflow-hidden rounded-full bg-gray-200 cursor-pointer">
+      className="relative h-2 w-full grow overflow-hidden rounded-full bg-gray-200 cursor-pointer">
       <SliderPrimitive.Range className="absolute h-full bg-primary cursor-pointer" />
     </SliderPrimitive.Track>
     <SliderPrimitive.Thumb
-      className="block h-8 w-8 rounded-full flex items-center justify-center border-primary bg-gray-100  cursor-pointer ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blend-overlay">
-        <PiSunLight className="text-xl font-bold"/>
+      className="block h-10 w-10 rounded-full flex items-center justify-center border-primary bg-gray-100  cursor-pointer ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blend-overlay">
+        <PiSunLight className="text-2xl font-bold"/>
       </SliderPrimitive.Thumb>
   </SliderPrimitive.Root>
 ))
