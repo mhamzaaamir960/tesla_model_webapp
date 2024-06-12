@@ -22,23 +22,15 @@ function MenuNav() {
       >
         {isChargingRouteOpen && <DrawerTrigger />}
         <DrawerContent className="bg-gray-100 min-h-[90vh] min-w-[400px] w-full max-w-[60%] ">
-          <Layout className="bg-gray-100">
-            <Sider
-              theme="light"
-              trigger={null}
-              width={250}
-              style={{ backgroundColor: "#f3f4f6" }}
-              className=" bg-gray-100 "
-            >
+          <div className="bg-gray-100 w-full flex flex-col">
+            <HeaderData />
+            <div className="flex">
               <Sidebar />
-            </Sider>
-            <Layout>
-              <HeaderData />
               <ContentData>
                 <Outlet />
               </ContentData>
-            </Layout>
-          </Layout>
+            </div>
+          </div>
         </DrawerContent>
       </Drawer>
     </div>

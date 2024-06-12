@@ -20,7 +20,7 @@ function Bluetooth() {
     <Dialog className="relative w-full ">
       <DialogTrigger className="p-2" asChild>
         <button onClick={handleBluetooth}>
-          <IoIosBluetooth className="text-xl text-gray-500 cursor-pointer" />{" "}
+          <IoIosBluetooth className="text-4xl text-gray-500 cursor-pointer" />{" "}
         </button>
       </DialogTrigger>
       <DialogContent className="w-[800px] absolute -right-72 top-[22rem] p-5 bg-white">

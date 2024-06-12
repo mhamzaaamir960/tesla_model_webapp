@@ -20,7 +20,7 @@ function Notifications() {
       >
         <button onClick={handleNotifications} className={`  `}>
           <IoIosNotifications
-            className={`text-xl text-gray-500 cursor-pointer `}
+            className={`text-4xl text-gray-500 cursor-pointer `}
           />
         </button>
       </DropdownMenuTrigger>

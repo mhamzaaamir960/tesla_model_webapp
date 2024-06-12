@@ -56,7 +56,7 @@ function Navbar() {
         </div>
 
         <div className="w-fit  ">
-          <div className="h-5 w-5 rounded-full bg-transparent border-2 border-gray-200 ring-2 ring-black flex justify-center items-center ">
+          <div className="h-5 w-5 rounded-full bg-transparent border-2 border-gray-200 ring-4 ring-black flex justify-center items-center ">
             <div className="border-4 border-black h-4 w-4 rounded-full"></div>
           </div>
         </div>

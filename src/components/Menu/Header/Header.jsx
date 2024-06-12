@@ -11,25 +11,25 @@ const { Header } = Layout;
 function HeaderData() {
   const { data } = useContextProvider();
   return (
-    <Header className="bg-gray-100 h-[60px] w-full relative top-0">
-      <Flex className=" flex  items-center justify-between h-full w-full">
+    <div className="bg-gray-100 h-[100px] w-full relative top-0 flex justify-center " >
+      <div className=" flex  items-center justify-between h-full w-full p-2 max-w-[90%]">
         <div className="flex items-center  gap-x-4 ">
           <img
             src={image}
             alt="Image"
-            width={18}
-            height={18}
+            width={40}
+            height={40}
             className="object-cover text-gray-500 "
           />
-          <span className="text-base font-medium">{data.name}</span>
+          <span className="text-2xl font-medium">{data.name}</span>
         </div>
         <div className="flex items-center gap-x-4 relative top-0 h-full">
           <Notifications />
           <Bluetooth />
           <Wifi />
         </div>
-      </Flex>
-    </Header>
+      </div>
+    </div>
   );
 }
 

@@ -4,6 +4,7 @@ import TeslaCar from "./components/CarSection/TeslaCar";
 import Map from "./components/Map/Map";
 import Navbar from "./components/Navbar/Navbar";
 import context from "./context/Context";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const storedData = localStorage.getItem("data");
@@ -31,6 +32,7 @@ function App() {
         <TeslaCar />
         <Map />
         <MenuNav />
+        <Footer />
       </main>
     </context.Provider>
   );

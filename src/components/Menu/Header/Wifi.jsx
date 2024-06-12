@@ -20,7 +20,7 @@ function Wifi() {
         asChild
       >
         <button onClick={handleWifi} className={`  `}>
-          <PiCellSignalFull className="text-xl text-gray-500 cursor-pointer" />
+          <PiCellSignalFull className="text-4xl text-gray-500 cursor-pointer" />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="absolute w-[200px] rounded rounded-r-none -top-1 -right-5 p-4 w-full">

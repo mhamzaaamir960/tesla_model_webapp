@@ -5,8 +5,8 @@ const { Content } = Layout;
 
 function ContentData({ children }) {
   return (
-    <Content
-      className="bg-gray-100 h-[70vh] overflow-y-scroll"
+    <div
+      className="bg-gray-100 h-[80vh] w-full max-w-[750px] border border-blue-300 overflow-y-scroll"
       style={{
         WebkitOverflowScrolling: "touch",
         overflowY: "scroll",
@@ -14,8 +14,8 @@ function ContentData({ children }) {
         scrollbarWidth: "none" /* for Firefox */,
       }}
     >
-      <div style={{ height: "100%" }}>{children}</div>
-    </Content>
+      <div>{children}</div>
+    </div>
   );
 }
 

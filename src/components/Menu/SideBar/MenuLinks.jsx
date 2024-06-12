@@ -11,7 +11,7 @@ export const MenuData = [
     key: "1",
     icon: (
       <div>
-        <IoToggle className="text-[18px] mr-2 " />
+        <IoToggle className="text-[35px] mr-2 " />
       </div>
     ),
     label: "Controls",
@@ -21,7 +21,7 @@ export const MenuData = [
     key: "2",
     icon: (
       <div>
-        <IoCarSportSharp className="text-[18px]  mr-2" />
+        <IoCarSportSharp className="text-[35px]  mr-2" />
       </div>
     ),
     label: "Pedals & Steering",
@@ -31,7 +31,7 @@ export const MenuData = [
     key: "3",
     icon: (
       <div>
-        <MdBolt className="text-[18px]  mr-2" />
+        <MdBolt className="text-[35px]  mr-2" />
       </div>
     ),
     label: "Charging",
@@ -41,7 +41,7 @@ export const MenuData = [
     key: "4",
     icon: (
       <div>
-        <GiSteeringWheel className="text-[18px]  mr-2" />
+        <GiSteeringWheel className="text-[35px]  mr-2" />
       </div>
     ),
     label: "Autopilot",
@@ -51,7 +51,7 @@ export const MenuData = [
     key: "5",
     icon: (
       <div>
-        <BiSolidLockAlt className="text-[18px]  mr-2" />
+        <BiSolidLockAlt className="text-[35px]  mr-2" />
       </div>
     ),
     label: "Locks",
@@ -61,7 +61,7 @@ export const MenuData = [
     key: "6",
     icon: (
       <div>
-        <TbSunFilled className="text-[18px]  mr-2" />
+        <TbSunFilled className="text-[35px]  mr-2" />
       </div>
     ),
     label: "Lights",
@@ -70,10 +70,10 @@ export const MenuData = [
   {
     key: "7",
     icon: (
-      <>
-        <div className="absolute left-[27px] top-[19px] w-[8px] h-[1px] bg-gray-500 -rotate-45"></div>
-        <BiRectangle className=" text-[18px] left-0 flex items-center justify-center mr-2"></BiRectangle>
-      </>
+      <div className="relative top-0">
+        <div className="absolute left-[5px] top-[15px] w-[20px] h-[2px] bg-gray-500 -rotate-45"></div>
+        <BiRectangle className=" text-[35px] left-0 flex items-center justify-center mr-2"></BiRectangle>
+      </div>
     ),
     label: "Display",
     link: "/display",
@@ -82,7 +82,7 @@ export const MenuData = [
     key: "8",
     icon: (
       <div>
-        <MdRoute className="text-[18px]  mr-2 scale-x-[-1]" />
+        <MdRoute className="text-[35px]  mr-2 scale-x-[-1]" />
       </div>
     ),
     label: "Trips",
@@ -92,7 +92,7 @@ export const MenuData = [
     key: "9",
     icon: (
       <div>
-        <TbNavigationFilled className="text-[18px]  mr-2" />
+        <TbNavigationFilled className="text-[35px]  mr-2" />
       </div>
     ),
     label: "Navigation",
@@ -102,7 +102,7 @@ export const MenuData = [
     key: "10",
     icon: (
       <div>
-        <PiWarningCircle className="text-[18px]  mr-2" />
+        <PiWarningCircle className="text-[35px]  mr-2" />
       </div>
     ),
     label: "Safety",
@@ -112,7 +112,7 @@ export const MenuData = [
     key: "11",
     icon: (
       <div>
-        <PiWrenchFill className="text-[18px]  mr-2" />
+        <PiWrenchFill className="text-[35px]  mr-2" />
       </div>
     ),
     label: "Service",
@@ -122,7 +122,7 @@ export const MenuData = [
     key: "12",
     icon: (
       <div>
-        <LiaDownloadSolid className="text-[18px]  mr-2" />
+        <LiaDownloadSolid className="text-[35px]  mr-2" />
       </div>
     ),
     label: "Software",
