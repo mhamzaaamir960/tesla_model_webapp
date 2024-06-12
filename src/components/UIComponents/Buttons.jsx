@@ -61,7 +61,9 @@ function Buttons({
           </ToggleGroupItem>
         )}
       </ToggleGroup>
-      {description && <p className="w-[80%] text-xl text-gray-800">{description}</p>}
+      {description && (
+        <p className="w-[80%] text-xl text-gray-800">{description}</p>
+      )}
     </div>
   );
 }
@@ -100,14 +102,14 @@ export function LongButtons({ btn1, btn2, btn3, className }) {
       )}
       {btn2 && (
         <ToggleGroupItem className="data-[state=on]:bg-white">
-          <button className="font-medium text-2xl w-[300px] border bg-gray-200  py-3 rounded">
+          <button className="font-medium  text-2xl w-[300px] border bg-gray-200  py-3 rounded">
             {btn2}
           </button>
         </ToggleGroupItem>
       )}
       {btn3 && (
         <ToggleGroupItem className="data-[state=on]:bg-white">
-          <button className="font-medium w-[220px] border bg-gray-200  py-3 rounded">
+          <button className="font-medium  w-[220px] border bg-gray-200  py-3 rounded">
             {btn3}
           </button>
         </ToggleGroupItem>
