@@ -1,10 +1,8 @@
 import React from "react";
-import { useContextProvider } from "@/context/Context";
 import Container from "@/components/UIComponents/Container";
 import { Slider } from "@/components/ui/slider";
 import { Toggle } from "@/components/ui/toggle";
 import { cn } from "@/lib/utils";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import SelectBar from "@/components/UIComponents/Select";
 import Buttons from "@/components/UIComponents/Buttons";
 import Form from "@/components/DataChange/Form";
@@ -12,7 +10,7 @@ import { CiMenuKebab } from "react-icons/ci";
 
 function Display({ className, ...props }) {
   return (
-    <Container className={" relative top-0"}>
+    <Container className={" relative top-0 mb-28"}>
       <Buttons
         heading={"Appearance"}
         btn1={"Light"}
@@ -78,7 +76,6 @@ function Display({ className, ...props }) {
         heading={"Tire Pressure"}
         btn1={"Bar"}
         btn2={"PSI"}
-        className={"mb-28"}
       />
     </Container>
   );

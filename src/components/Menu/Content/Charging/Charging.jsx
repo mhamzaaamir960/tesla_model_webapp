@@ -56,7 +56,7 @@ function Charging({ className, ...props }) {
               max={100}
               step={10}
               cn1={"bg-gray-400 h-3"}
-              cn2={"bg-green-500 "}
+              cn2={"bg-green-500"}
               cn3={"shadow bg-white"}
               cn4={"hidden"}
               className={cn("w-full border rounded p-4", className)}
