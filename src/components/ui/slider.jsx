@@ -20,7 +20,7 @@ const Slider = React.forwardRef(
         className={`relative h-2 w-full grow overflow-hidden rounded-full bg-gray-200 cursor-pointer ${cn1}`}
       >
         <SliderPrimitive.Range
-          className={`absolute h-full bg-primary cursor-pointer ${cn2}`}
+          className={`absolute h-full ${cn2} bg-black cursor-pointer `}
         />
       </SliderPrimitive.Track>
       <SliderPrimitive.Thumb

@@ -8,7 +8,7 @@ function Navigation() {
   const [vol, setVol] = useState(50);
   const [counter, setCounter] = useState(5);
   return (
-    <Container className={""}>
+    <Container>
       <div className="flex flex-col gap-y-2 mb-10">
         <span className="font-medium text-3xl">Navigation Volume </span>
         <div className="w-[500px] mt-2  flex justify-between ">

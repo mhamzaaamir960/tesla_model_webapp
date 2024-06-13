@@ -125,7 +125,7 @@ const OpenLayersMap = () => {
     <div className="relative top-0 min-h-screen w-full bg-white">
       <div id="map" className="w-full h-full"></div>
       <div>
-        <div className="flex items-center bg-gray-100 p-5 rounded absolute top-28 left-10 z-10">
+        <div className="flex items-center bg-gray-100 shadow p-5 rounded absolute top-28 left-10 z-10">
           <TbNavigationFilled className="text-2xl cursor-pointer" />
         </div>
         <div
@@ -133,14 +133,14 @@ const OpenLayersMap = () => {
           ref={searchContainerRef}
           className="absolute top-28 left-32 z-10 bg-gray-100 px-6 py-2 rounded shadow flex items-center gap-x-2"
         >
-          <IoIosSearch className="text-xl text-gray-600" />
+          <IoIosSearch className="text-3xl text-gray-600" />
           <input
             type="text"
             placeholder="Navigate"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyPress={handleKeyPress}
-            className="p-2 text-gray-600 text-xl font-medium bg-inherit outline-none rounded"
+            className="p-2 text-gray-600 text-2xl font-medium bg-inherit outline-none rounded"
           />
         </div>
       </div>
