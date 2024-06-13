@@ -94,7 +94,7 @@ const OpenLayersMap = () => {
 
     // Use OpenLayers Geocoding API or other geocoding service
     fetch(
-      `https://nominatim.openstreetmap.org/search?format=json&q=${searchQuery}&accept-language=en`
+      `https://nominatim.openstreetmap.org/search?format=json&q=${searchQuery}&accept-language=en` 
     )
       .then((response) => response.json())
       .then((data) => {
