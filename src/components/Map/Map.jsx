@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import "ol/ol.css";
 import { Map, View } from "ol";
 import TileLayer from "ol/layer/Tile";
-import OSM from "ol/source/OSM";
+import XYZ from "ol/source/XYZ";  // Import XYZ source
 import { fromLonLat } from "ol/proj";
 import VectorLayer from "ol/layer/Vector";
 import VectorSource from "ol/source/Vector";
@@ -21,12 +21,14 @@ const OpenLayersMap = () => {
   const searchContainerRef = useRef(null);
 
   useEffect(() => {
-    // Initialize the map without a center initially
+    // Initialize the map with a language-specific tile source
     const initialMap = new Map({
       target: "map",
       layers: [
         new TileLayer({
-          source: new OSM(),
+          source: new XYZ({
+            url: "https://{a-c}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png?lang=en"  // Using OpenStreetMap France tiles with English language
+          }),
         }),
       ],
       view: new View({
@@ -94,7 +96,7 @@ const OpenLayersMap = () => {
 
     // Use OpenLayers Geocoding API or other geocoding service
     fetch(
-      `https://nominatim.openstreetmap.org/search?format=json&q=${searchQuery}&accept-language=en` 
+      `https://nominatim.openstreetmap.org/search?format=json&q=${searchQuery}&accept-language=en`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -148,11 +150,11 @@ const OpenLayersMap = () => {
       <div className="absolute top-28 right-10 bg-gray-100 p-2 rounded flex flex-col gap-y-8 items-center py-4">
         <MdLocationOn
           className="text-black text-5xl cursor-pointer"
-          onClick={() => goToLocation([-2.2426, 53.4808])}
+          onClick={() => goToLocation([-2.2426, 53.4808])} // Manchester coordinates
         />
         <MdBolt
           className="text-3xl cursor-pointer bg-gray-500 text-white rounded-full"
-          onClick={() => goToLocation([-0.1276, 51.5074])}
+          onClick={() => goToLocation([-0.1276, 51.5074])} // London coordinates
         />
       </div>
     </div>
