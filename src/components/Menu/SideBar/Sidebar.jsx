@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <div className="w-[420px] h-[85vh]  px-10 py-5 flex flex-col gap-y-2 ">
+    <div className="w-[420px] h-[85vh]  px-10 py-5 flex flex-col gap-y-[0.39rem] ">
       {MenuData.map((item) => (
         <NavLink to={item.link} key={item.key} >
           {({ isActive }) => (
