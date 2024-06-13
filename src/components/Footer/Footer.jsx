@@ -17,7 +17,7 @@ import { FaVolumeHigh, FaVolumeXmark } from "react-icons/fa6";
 function Footer() {
   const { setIsChargingRouteOpen } = useContextProvider();
   const [counter, setCounter] = useState(22);
-  const [volume, setVolume] = useState(false);
+  const [volume, setVolume] = useState(true);
 
   return (
     <div className="fixed bottom-0 bg-black h-[100px] w-full z-[60] flex justify-start items-center px-4 gap-x-36 ">

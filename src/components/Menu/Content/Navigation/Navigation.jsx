@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { FaVolumeXmark, FaVolumeHigh, FaPlus, FaMinus } from "react-icons/fa6";
 
 function Navigation() {
-  const [volume, setVolume] = useState(false);
+  const [volume, setVolume] = useState(true);
   const [vol, setVol] = useState(50);
   const [counter, setCounter] = useState(5);
   return (
