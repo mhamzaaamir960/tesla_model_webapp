@@ -50,7 +50,12 @@ function Lights() {
         btn3={"Auto"}
       />
 
-      <SwitchButton heading={"Headlights after Exit"} />
+      <SwitchButton
+        heading={"Adaptive High Beams"}
+        description={
+          "Selectively dims individual pixels of the high beams to reduce glare for other traffic."
+        }
+      />
       <SwitchButton heading={"Headlights after Exit"} />
       <SwitchButton heading={"Steering Wheel Lights"} />
     </Container>
