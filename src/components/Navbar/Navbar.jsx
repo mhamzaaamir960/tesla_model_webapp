@@ -26,7 +26,7 @@ function Navbar() {
 
   return (
     <nav className="fixed top-2 -right-24 w-full bg-transparent z-10 flex justify-center  ">
-      <div className="flex gap-x-10 w-[940px]   h-[50px] max-w-[90%] items-center ">
+      <div className="flex gap-x-10 min-w-[940px]   h-[50px] max-w-[90%] items-center ">
         <div className="flex items-center justify-center gap-x-2 w-[180px] ">
           <span className="font-medium text-3xl">{data.batteryStatus}%</span>
           <div className="rotate-90">
